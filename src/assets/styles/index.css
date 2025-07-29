@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter Font Local - Format yang benar untuk .ttc */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/FontInter/Inter.ttc') format('truetype-collection');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback untuk browser yang tidak support .ttc */
+@font-face {
+  font-family: 'Inter-fallback';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+}
+
+/* Tambahkan varian lain jika ada (Medium, SemiBold, dsb) */
+/* Ganti CDN Font Awesome dengan yang lebih reliable */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', 'Inter-fallback', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #F6FBFF 0%, #EAF3FF 100%);
+    color: #1A2B4C;
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4A9EFF;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(24px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(74, 158, 255, 0.2);
+  }
+
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-1;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.12);
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 158, 255, 0.4);
+  }
+
+  .btn-secondary {
+    @apply glass-effect text-primary-500 font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-primary-500/10 hover:-translate-y-1;
+  }
+
+  /* Card style */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(74, 158, 255, 0.08);
+    color: var(--text-main);
+  }
+
+  /* Section title */
+  .section-title {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
+  /* Subtitle */
+  .section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\:grid-cols-8 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+:root {
+  --primary: #2196F3;
+  --primary-dark: #1565C0;
+  --primary-light: #EAF3FF;
+  --card-bg: #FFFFFF;
+  --card-border: #D6E6F7;
+  --text-main: #1A2B4C;
+  --text-muted: #6B7A99;
+  --accent: #4A9EFF;
+  --accent-bg: #F0F7FF;
+}
