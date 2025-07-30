@@ -77,11 +77,6 @@ export default function BrilianAI() {
                 {/* Background Effects */}
                 <div className="absolute top-1/4 right-0 w-[340px] h-[340px] md:w-[400px] md:h-[400px] rounded-full bg-blue-400/15 blur-[150px] -translate-x-1/4 pointer-events-none"></div>
                 <div className="absolute bottom-1/3 left-0 w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full bg-blue-400/15 blur-[150px] translate-x-1/4 pointer-events-none"></div>
-                <div className="absolute inset-0 pointer-events-none z-0">
-                    <img src="/images/Image-BintangBG.png" alt="Star" className="absolute top-12 left-20 h-12 md:h-16 animate-pulse opacity-30" />
-                    <img src="/images/Image-BintangBG.png" alt="Star" className="absolute bottom-16 left-16 h-4 md:h-5 animate-pulse delay-800 opacity-25" />
-                    <img src="/images/Image-BintangBG.png" alt="Star" className="absolute top-1/3 left-24 h-8 md:h-10 animate-pulse delay-500 opacity-20" />
-                </div>
 
                 <div className="container mx-auto px-4 md:px-[80px] lg:px-[140px]">
                     {/* Feature List */}
@@ -228,7 +223,7 @@ export default function BrilianAI() {
                             {/* Badge */}
                             <div className="flex justify-center w-full md:w-auto">
                                 <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-sm font-medium shadow-md">
-                                    <img src="/images/Image-BintangBG.png" alt="Star" className="w-4 h-4" />
+                                    <img src="/images/Image-BintangBG.svg" alt="Star" className="w-4 h-4" />
                                     New: Our AI integration just landed
                                 </div>
                             </div>
