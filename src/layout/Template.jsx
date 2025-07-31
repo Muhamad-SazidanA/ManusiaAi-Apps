@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Template() {
     const [activeTab, setActiveTab] = useState('null');
-    const [newsDefaultTab, setNewsDefaultTab] = useState('blog'); // Tambah state untuk default tab News
+    const [newsDefaultTab, setNewsDefaultTab] = useState('blog');
     const [scrolled, setScrolled] = useState(false);
 
-    function scrollToTop() {
-        window.scrollTo(0, 'instant'); // langsung ke atas tanpa animasi
-    }
-
-    useEffect(() => {
-        const onScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-        window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
+    
     return (
         <div className="min-h-screen flex flex-col bg-[#F6F8FB] text-[#222]">
             {/* Floating WhatsApp Button */}
@@ -39,10 +31,9 @@ export default function Template() {
                 <nav className="max-w-6xl mx-auto flex items-center justify-between px-2 md:px-10 py-4">
                     {/* Logo */}
                     <Link
-                        to="/"
+                        onClick={() => handleNavigation('/')}
                         className="flex items-center gap-3 ml-0"
                         style={{ marginLeft: '-12px' }}
-                        onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src="/LogoUtama-Manusia.Ai.svg" alt="Manusia.AI" className="h-10 w-auto" />
                     </Link>
@@ -50,27 +41,24 @@ export default function Template() {
                     <ul className="flex items-center mt-1 gap-2 md:gap-3 font-medium text-[#222]">
                         <li>
                             <Link
-                                to="/"
+                                onClick={() => handleNavigation('/')}
                                 className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED]"
-                                onClick={() => window.scrollTo(0, 0)}
                             >
                                 Home
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to="#"
+                                onClick={() => handleNavigation('/#')}
                                 className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED]"
-                                onClick={() => window.scrollTo(0, 0)}
                             >
                                 About
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to="/solutions"
+                                onClick={() => handleNavigation('/solutions')}
                                 className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED]"
-                                onClick={() => window.scrollTo(0, 0)}
                             >
                                 Solutions
                             </Link>
@@ -95,22 +83,15 @@ export default function Template() {
                             >
                                 <div className="p-3">
                                     <Link
-                                        to="/brilian-ai"
+                                        onClick={() => handleNavigation('/brilian-ai')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
-                                        onClick={() => {
-                                            setActiveTab(null);
-                                            window.scrollTo(0, 0);
-                                        }}
                                     >
                                         <i className="fa-solid fa-brain text-[#1976ED] text-lg"></i> Brilian.AI
                                     </Link>
                                     <Link
-                                        to="/rangkum-ai"
+                                        onClick={() => handleNavigation('/rangkum-ai')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
-                                        onClick={() => {
-                                            setActiveTab(null);
-                                            window.scrollTo(0, 0);
-                                        }}
+
                                     >
                                         <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Rangkum.AI
                                     </Link>
@@ -164,42 +145,32 @@ export default function Template() {
                                     {activeTab === 'brilian' && (
                                         <div className="ml-4 animate-fade-in flex items-center" style={{ minWidth: 340, minHeight: 180 }}>
                                             <div className="grid grid-cols-2 gap-x-6 gap-y-4 w-full">
-                                                <Link to="/brilianai-banking" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/brilianai-banking')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-landmark text-[#1976ED] text-xl"></i>
                                                     <span>
                                                         BANK dan<br />Multifinance
                                                     </span>
                                                 </Link>
-                                                <Link to="/brilianai-hospital" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/brilianai-hospital')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-hospital text-[#1976ED] text-xl"></i>
                                                     <span>Health Care</span>
                                                 </Link>
-                                                <Link to="/brilianai-insurance" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/brilianai-insurance')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-hand-holding-medical text-[#1976ED] text-xl"></i>
                                                     <span>Insurance</span>
                                                 </Link>
-                                                <Link to="/brilianai-humanr" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/brilianai-humanr')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-users text-[#1976ED] text-xl"></i>
                                                     <span>
                                                         Human<br />Resource
                                                     </span>
                                                 </Link>
-                                                <Link to="/brilianai-fmgc" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/brilianai-fmgc')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-basket-shopping text-[#1976ED] text-xl"></i>
                                                     <span>FMGC</span>
                                                 </Link>
@@ -209,33 +180,25 @@ export default function Template() {
                                     {activeTab === 'rangkum' && (
                                         <div className="ml-4 animate-fade-in flex items-center" style={{ minWidth: 340, minHeight: 180 }}>
                                             <div className="grid grid-cols-2 gap-x-4 gap-y-4 w-full">
-                                                <Link to="/rangkum-banking" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/rangkum-banking')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-landmark text-[#1976ED] text-xl"></i>
                                                     <span>
                                                         BANK dan<br />Multifinance
                                                     </span>
                                                 </Link>
-                                                <Link to="/rangkum-hospital" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/rangkum-hospital')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-hospital text-[#1976ED] text-xl"></i>
                                                     <span>Health Care</span>
                                                 </Link>
-                                                <Link to="/rangkum-insurance" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/rangkum-insurance')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-hand-holding-medical text-[#1976ED] text-xl"></i>
                                                     <span>Insurance</span>
                                                 </Link>
-                                                <Link to="/rangkum-humanr" className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" onClick={() => {
-                                                    setActiveTab(null);
-                                                    window.scrollTo(0, 0);
-                                                }}>
+                                                <Link onClick={() => handleNavigation('/rangkum-humanr')}
+                                                className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2" >
                                                     <i className="fa-solid fa-users text-[#1976ED] text-xl"></i>
                                                     <span>
                                                         Human<br />Resource
@@ -325,11 +288,9 @@ export default function Template() {
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-start">
-                                                    <Link to="/blog" className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
-                                                        onClick={() => {
-                                                            setActiveTab(null);
-                                                            window.scrollTo(0, 0);
-                                                        }}
+                                                    <Link onClick={() => handleNavigation('/blog')}
+                                                    className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
+                                                        
                                                     >
                                                         View all Blog <span className="text-lg">&rarr;</span>
                                                     </Link>
@@ -353,11 +314,8 @@ export default function Template() {
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-start">
-                                                    <Link to="/events" className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
-                                                        onClick={() => {
-                                                            setActiveTab(null);
-                                                            window.scrollTo(0, 0);
-                                                        }}
+                                                    <Link onClick={() => handleNavigation('/events')}
+                                                        className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
                                                     >
                                                         View all Events <span className="text-lg">&rarr;</span>
                                                     </Link>
@@ -381,11 +339,8 @@ export default function Template() {
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-start">
-                                                    <Link to="/casestudy" className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
-                                                        onClick={() => {
-                                                            setActiveTab(null);
-                                                            window.scrollTo(0, 0);
-                                                        }}
+                                                    <Link onClick={() => handleNavigation('/casestudy')}
+                                                        className="text-[#1976ED] hover:underline font-medium flex items-center gap-2"
                                                     >
                                                         View all Case Study <span className="text-lg">&rarr;</span>
                                                     </Link>
@@ -400,9 +355,8 @@ export default function Template() {
                     </ul>
                     {/* Request Demo Button */}
                     <Link
-                        to="/demo-email"
+                        onClick={() => handleNavigation('/demo-email')}
                         className="bg-[#0A7AFF] text-white px-5 py-2 rounded-lg font-semibold shadow hover:bg-[#1976ED] transition ml-2"
-                        onClick={scrollToTop}
                         style={{ alignSelf: 'flex-end', marginRight: '-12px' }}
                     >
                         Request Demo

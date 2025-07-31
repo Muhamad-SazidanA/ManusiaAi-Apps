@@ -74,10 +74,6 @@ export default function BrilianBanking() {
                 <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
                 <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Mendukung efisiensi customer<br />service dan complaint handling</span>
               </li>
-              <li className="flex items-center gap-6 ml-[-30px]">
-                <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Mempercepat onboarding<br />karyawan baru</span>
-              </li>
             </ul>
           </div>
           <div className="flex-none w-[180px] md:w-[280px] relative z-10">

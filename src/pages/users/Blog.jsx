@@ -32,7 +32,7 @@ export default function Blog() {
                                 boxShadow: "0 0 24px 2px #2196F3, 0 0 0 2px #2196F3",
                             }}
                         >
-                            <h3 className="text-xl font-semibold text-[#2196F3] mb-4 text-center">BLOG1</h3>
+                            <h3 className="text-xl font-semibold text-[#0377FF] mb-4 text-center">BLOG1</h3>
                             <div className="w-full flex justify-center mb-4">
                                 <img
                                     src="/images/DummyContent.svg"
@@ -41,10 +41,10 @@ export default function Blog() {
                                 />
                             </div>
                             <div className="flex flex-col items-center gap-2">
-                                <span className="inline-block px-3 py-1 rounded-full bg-[#F0F7FF] text-[#4A9EFF] text-xs font-medium mb-2 shadow">
+                                <span className="inline-block px-3 py-1 rounded-full bg-[#F0F7FF] text-[#0377FF] text-xs font-medium mb-2 shadow">
                                     AI is taking notes.
                                 </span>
-                                <p className="text-[#6B7A99] text-sm text-center mb-2">
+                                <p className="text-[#0377FF] text-sm text-center mb-2">
                                     This section is a sample blog content.
                                 </p>
                             </div>

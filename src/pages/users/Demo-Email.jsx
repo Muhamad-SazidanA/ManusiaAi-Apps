@@ -21,15 +21,15 @@ export default function DemoEmail() {
                         style={{
                             boxShadow: '0 8px 32px rgba(33, 150, 243, 0.1)'
                         }}>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#2196F3] mb-2">Contact Us</h2>
-                        <p className="text-[#2196F3] text-sm mb-6">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0377FF] mb-2">Contact Us</h2>
+                        <p className="text-[#0377FF] text-sm mb-6">
                             Don't have time to call? Send your enquiry to the Manusia.AI<br />
                             team and we'll get back to you quickly. If you do not receive<br />
                             a response, please reach out via WhatsApp.
                         </p>
                         <form className="space-y-5">
                             <div>
-                                <label className="block text-[#2196F3] text-sm mb-2 font-medium">Name</label>
+                                <label className="block text-[#0377FF] text-sm mb-2 font-medium">Name</label>
                                 <input
                                     type="text"
                                     placeholder="Your full name"
@@ -37,7 +37,7 @@ export default function DemoEmail() {
                                 />
                             </div>
                             <div>
-                                <label className="block text-[#2196F3] text-sm mb-2 font-medium">Email</label>
+                                <label className="block text-[#0377FF] text-sm mb-2 font-medium">Email</label>
                                 <input
                                     type="email"
                                     placeholder="Your email address"
@@ -45,7 +45,7 @@ export default function DemoEmail() {
                                 />
                             </div>
                             <div>
-                                <label className="block text-[#2196F3] text-sm mb-2 font-medium">Company Name</label>
+                                <label className="block text-[#0377FF] text-sm mb-2 font-medium">Company Name</label>
                                 <input
                                     type="text"
                                     placeholder="Enter Company Name"
@@ -53,7 +53,7 @@ export default function DemoEmail() {
                                 />
                             </div>
                             <div>
-                                <label className="block text-[#2196F3] text-sm mb-2 font-medium">Phone Number</label>
+                                <label className="block text-[#0377FF] text-sm mb-2 font-medium">Phone Number</label>
                                 <input
                                     type="text"
                                     placeholder="Enter Phone Number"
@@ -61,7 +61,7 @@ export default function DemoEmail() {
                                 />
                             </div>
                             <div>
-                                <label className="block text-[#2196F3] text-sm mb-2 font-medium">How can we help</label>
+                                <label className="block text-[#0377FF] text-sm mb-2 font-medium">How can we help</label>
                                 <textarea
                                     placeholder="How can we help you"
                                     rows="4"
@@ -80,18 +80,18 @@ export default function DemoEmail() {
 
                 {/* Right Side Content */}
                 <div className="flex flex-col justify-start items-start mt-8 md:mt-0">
-                    <h1 className="text-3xl md:text-4xl font-bold text-[#2196F3] mb-4 mt-16 leading-tight">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-4 mt-16 leading-tight">
                         Bring Your Ideas to Life<br />
                         with Manusia.AI.
                     </h1>
-                    <p className="text-[#2196F3] text-base mb-12 max-w-md">
+                    <p className="text-[#0377FF] text-base mb-12 max-w-md">
                         Reach out today — let's craft intelligent solutions that<br />
                         accelerate your business transformation.
                     </p>
 
                     {/* Our Office Section */}
                     <div className="w-full">
-                        <h3 className="text-xl font-bold text-[#2196F3] mb-4">Our Office</h3>
+                        <h3 className="text-xl font-bold text-[#0377FF] mb-4">Our Office</h3>
                         <div className="flex items-start gap-3 mb-6">
                             <div className="w-6 h-6 bg-[#2196F3] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -99,7 +99,7 @@ export default function DemoEmail() {
                                 </svg>
                             </div>
                             <div>
-                                <p className="text-[#2196F3] text-sm leading-relaxed">
+                                <p className="text-[#0377FF] text-sm leading-relaxed">
                                     Jl. Siantar No.18, RT.1/RW.2, Cideng,<br />
                                     Kecamatan Gambir,Kota Jakarta Pusat,<br />
                                     Daerah Khusus Ibukota Jakarta 10150

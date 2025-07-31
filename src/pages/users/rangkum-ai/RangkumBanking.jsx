@@ -1,145 +1,154 @@
 import React from 'react';
 
-export default function RangkumBanking() {
+export default function RangkumBangking() {
     return (
-        <div className="w-full min-h-screen bg-gradient-to-b from-black via-slate-900 to-blue-950 text-white font-inter relative overflow-x-hidden">
-            <section className="w-full bg-white py-20 px-6 md:px-16 flex items-center justify-center">
-                <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-                    {/* Kiri: Teks */}
-                    <div className="flex-1 text-left">
-                        <h1 className="text-3xl md:text-5xl font-bold text-[#1669F2] leading-tight mb-6">
-                            AI-Powered Document <br />
-                            Automation for Banking <br />
-                            & Multifinance
+        <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
+            {/* Hero Section */}
+            <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
+                <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 mb-16">
+                    {/* Kiri: Teks dan Button */}
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-inter mb-5 leading-[1.3] pb-[10px]">
+                            <span className="bg-[#0377FF] text-transparent bg-clip-text whitespace-nowrap">
+                                AI-Powered Document<br />Automation for Banking <br />& Multifinance
+                            </span>
                         </h1>
-                        <p className="text-black text-base md:text-xl mb-8">
-                            Otomatisasi dokumen finansial dan <br />
-                            identitas untuk proses yang lebih <br />
-                            cepat dan akurat.
+                        <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg  text-left">
+                            Otomatisasi dokumen finansial dan identitas untuk proses yang lebih cepat dan akurat.
                         </p>
-                        <button className="bg-[#1669F2] hover:bg-[#1257C3] text-white px-6 py-3 rounded-md font-semibold shadow-md transition-all duration-200">
+                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
                         </button>
                     </div>
                     {/* Kanan: Gambar */}
-                    <div className="flex-1 flex justify-center">
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
                         <img
-                            src="/images/RangkumAi/RangkumBanking/IndustriBMF1.svg" // Ganti ini dengan gambar kamu
-                            alt="Insurance Document Illustration"
+                            src="/images/RangkumAi/RangkumBanking/IndustriBMF1.svg"
+                            alt="HR Document Management"
                             className="w-full max-w-md"
                         />
                     </div>
                 </div>
             </section>
 
-            {/* Key Features Section */}
-            <section className="pt-[100px] md:pt-[150px] pb-20 bg-white overflow-hidden relative">
-                <div className="container mx-auto px-4 md:px-24 text-center relative z-10 mb-36">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-inter text-black">Challenges in the
-                    </h1>
+            {/* Benefits Section */}
+            <section className="relative py-16 overflow-hidden px-4 md:px-12">
+                <h3 className="relative text-4xl md:text-5xl font-semibold text-black/90 mb-4 text-center">Challenges in the</h3>
+                <h3 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center">Banking & Multifinance Industry</h3>
+                <div className="relative max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between ">
+                    <div className="flex-1">
+                        <ul className="space-y-6 relative z-20">
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed ">Volume dokumen tinggi &<br />tidak terstruktur (KTP, slip<br />gaji, rekening koran)</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Proses input & validasi<br />manual lambat dan rawan<br />kesalahani</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Sistem yang tidak fleksibel<br />terhadap format dokumen<br />baru</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex-none w-[180px] md:w-[280px] relative z-10">
+                        <img
+                            src="/images/RangkumAi/RangkumBanking/IndustriBMF2.svg"
+                            alt="Banking Chart"
+                            className="w-full max-w-md h-auto object-contain scale-[1.5] -translate-x-[60px] "
+                        />
+                    </div>
                 </div>
+            </section>
 
-                <div className="container mx-auto px-4 md:px-[80px] lg:px-[140px] space-y-32">
-
-                    {/* Feature 1 */}
-                    <div className="mb-20" data-aos="fade-left">
-                        {/* Judul di tengah atas */}
-                        <h1 className="text-3xl md:text-5xl font-bold font-inter mb-12 text-[#1669F2] text-center">
-                            Banking & Multifinance Industry
-                        </h1>
-                        {/* Konten teks dan gambar */}
-                        <div className="md:flex justify-between items-center gap-12">
-                            {/* Teks */}
-                            <div className="flex-1">
-                                <ul className="list-disc pl-5 text-base md:text-lg text-[#1A73E8] space-y-3 marker:text-[#1A73E8]">
-                                    <li>Volume dokumen tinggi & tidak terstruktur (KTP, slip gaji, rekening koran)</li>
-                                    <li>Proses input & validasi manual lambat dan rawan kesalahan</li>
-                                    <li>Sistem yang tidak fleksibel terhadap format dokumen baru</li>
-                                </ul>
-                            </div>
-                            {/* Gambar */}
-                            <div className="flex-1 flex justify-center mt-10 md:mt-0">
-                                <img src="/images/RangkumAi/RangkumBanking/IndustriBMF2.svg" alt="Data Extraction" className="w-full max-w-md" />
-                            </div>
-                        </div>
+            {/*Section Solusi dari Brilian.AI*/}
+            <section className="relative py-16 overflow-hidden px-4 md:px-12">
+                <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
+                    How Rangkum.AI Helps
+                </h2>
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto items-center justify-between gap-10 mb-20">
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <p className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed max-w-lg text-left">
+                            Rangkum.AI dari Manusia.AI membantu tim perbankan dan multifinance mengelola dokumen dalam volume besar secara cepat dan akurat — tanpa aturan tetap, tanpa input manual.
+                        </p>
                     </div>
-
-
-                    {/* Feature 2 */}
-                    <div className="mb-20" data-aos="fade-right">
-                        {/* Judul di tengah atas */}
-                        <h1 className="text-3xl md:text-5xl font-bold font-inter mb-12 text-[#1669F2] text-center">
-                            How Rangkum.AI Helps
-                        </h1>
-                        {/* Konten */}
-                        <div className="md:flex md:flex-row-reverse justify-between items-center gap-12">
-                            {/* Teks */}
-                            <div className="flex-1">
-                                <p className="text-base md:text-xl font-normal text-black leading-relaxed">
-                                    Rangkum.AI dari Manusia.AI membantu tim perbankan dan multifinance mengelola dokumen dalam volume besar secara cepat dan akurat — tanpa aturan tetap, tanpa input manual.
-                                </p>
-                            </div>
-                            {/* Gambar */}
-                            <div className="flex-1 flex justify-center mt-10 md:mt-0">
-                                <img src="/images/RangkumAi/RangkumBanking/IndustriBMF3.svg" alt="Report Generation" className="w-full max-w-md" />
-                            </div>
-                        </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumBanking/IndustriBMF3.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md h-auto"
+                        />
                     </div>
-
-
-                    {/* Feature 3 */}
-                    <div className="md:flex justify-between items-center gap-12" data-aos="fade-left">
-                        <div className="flex-1">
-                            <ul className="list-disc pl-5 text-base md:text-lg text-[#1A73E8] space-y-3 marker:text-[#1A73E8]">
-                                <li>Ekstraksi data otomatis dari dokumen identitas & finansial</li>
-                                <li>Klasifikasi dokumen seperti KTP, NPWP, PO, invoice, slip gaji</li>
-                                <li>Input data langsung ke sistem internal, CRM, atau bot RPA</li>
-                                <li>Kuitansi & Dokumen Identitas (KTP, SIM, NPWP), Invoice Medis</li>
-                            </ul>
-                        </div>
-                        <div className="flex-1 flex justify-center">
-                            <img src="/images/RangkumAi/RangkumBanking/IndustriBMF4.svg" alt="Report Analysis" className="w-full max-w-md" />
-                        </div>
+                </div>
+                <div className="relative max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between mt-25">
+                    <div className="flex-1">
+                        <ul className="space-y-6 relative z-20">
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed ">Ekstraksi data otomatis dari<br />dokumen identitas &<br />finansial</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Klasifikasi dokumen seperti<br />KTP, NPWP, PO, invoice,<br />slip gaji</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Input data langsung ke<br />sistem internal, CRM, atau<br />bot RPA</span>
+                            </li>
+                        </ul>
                     </div>
-
-                    {/* Feature 4 */}
-                    <div className="mb-20" data-aos="fade-left">
-                        {/* Judul Tengah */}
-                        <h1 className="text-3xl md:text-5xl font-bold font-inter mb-12 text-[#1669F2] text-center">
-                            Examples of Supported Documents
-                        </h1>
-
-                        {/* Gambar Kiri, Teks Kanan */}
-                        <div className="md:flex justify-between items-center gap-12">
-                            {/* Gambar */}
-                            <div className="flex-1 flex justify-center mb-10 md:mb-0">
-                                <img src="/images/RangkumAi/RangkumBanking/IndustriBMF5.svg" alt="Supported Documents" className="w-full max-w-md" />
-                            </div>
-
-                            {/* Teks */}
-                            <div className="flex-1">
-                                <ul className="list-disc pl-5 text-base md:text-lg text-[#1A73E8] space-y-3 marker:text-[#1A73E8]">
-                                    <li>Onboarding Nasabah Baru: Ekstrak & validasi KYC secara otomatis</li>
-                                    <li>Pemrosesan Kredit: Percepat analisis dokumen pengajuan & jaminan</li>
-                                    <li>Otomatisasi AP: Cocokkan invoice & PO, ambil data pembayaran</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div className="flex-none w-[180px] md:w-[280px] relative z-10">
+                        <img
+                            src="/images/RangkumAi/RangkumBanking/IndustriBMF4.svg"
+                            alt="Banking Chart"
+                            className="w-full max-w-md h-auto object-contain scale-[1.5] -translate-x-[60px] "
+                        />
                     </div>
+                </div>
+            </section>
+            {/* Benefits Section */}
+            <section className="relative py-16 overflow-hidden px-4 md:px-12">
+                <h3 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center">Main Use Case</h3>
+                <div className="relative max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between ">
+                    <div className="flex-1">
+                        <ul className="space-y-6 relative z-20">
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed ">Onboarding Nasabah Baru:<br />Ekstrak & validasi KYC secara<br />otomatis</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Pemrosesan Kredit: Percepat<br />analisis dokumen pengajuan<br />& jaminan</span>
+                            </li>
+                            <li className="flex items-center gap-6 ml-[-30px]">
+                                <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
+                                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Otomatisasi AP: Cocokkan<br />invoice & PO, ambil data<br />pembayaran</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex-none w-[180px] md:w-[280px] relative z-10">
+                        <img
+                            src="/images/RangkumAi/RangkumBanking/IndustriBMF5.svg"
+                            alt="Banking Chart"
+                            className="w-full max-w-md h-auto object-contain scale-[1.5] -translate-x-[60px] "
+                        />
+                    </div>
+                </div>
+            </section>
 
-            <section className="py-20 bg-white text-center">
-                <h2 className="text-2xl md:text-4xl font-semibold text-[#1A62DC] mb-6">
+            {/* deskripsi */}
+            <section className="py-16 bg-white text-center px-4 md:px-12">
+                <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
                     Stop buang waktu input manual!
                 </h2>
-                <p className="text-lg md:text-xl text-[#1A62DC] max-w-2xl mx-auto leading-relaxed">
-                   Lihat bagaimana Rangkum.AI bisa memangkas waktu kerja hingga 80%.
+                <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+                    Lihat bagaimana Rangkum.AI bisa memangkas waktu kerja hingga 80%
                 </p>
             </section>
 
-                </div>
-            </section>
             {/* CTA Section */}
-            <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden">
+            <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-12">
                 {/* Card Container */}
                 <div className="relative z-10 w-full flex justify-center items-center">
                     <div
@@ -150,29 +159,31 @@ export default function RangkumBanking() {
                             border: "1px solid #d3eaff"
                         }}
                     >
+                        <div className="absolute left-1/2 -translate-x-20 -translate-y-10 w-auto h-20 animate-pulse delay-500 opacity-30 z-30 pointer-events-none">
+                            <img src="/images/Image-BintangBG.svg" alt="Star" className="w-full h-full" />
+                        </div>
                         {/* Left Side */}
                         <div className="flex-1 text-left pr-0 md:pr-10">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#0075FF] mb-2">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-2">
                                 Get started today!
                             </h2>
-                            <p className="text-xl md:text-2xl font-medium text-[#0075FF]">
+                            <p className="text-lg md:text-4xl font-light text-[#0377FF] max-w-3xl mx-auto leading-snug">
                                 Siap Mempercepat Akses <br /> Pengetahuan Anda?
                             </p>
                         </div>
 
                         {/* Right Side */}
-                        <div className="flex-1 flex flex-col items-center md:items-end gap-4 w-full md:w-auto mt-8 md:mt-0">
+                        <div className="flex-1 flex flex-col justify-center items-center gap-4 w-full md:w-auto mt-0">
                             {/* Badge */}
-                            <div className="flex justify-center w-full md:w-auto">
-                                <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-sm font-medium shadow-md">
-                                    <img src="/images/Image-BintangBG.svg" alt="Star" className="w-4 h-4" />
+                            <div className="w-full flex justify-center md:justify-end">
+                                <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-base font-medium shadow-md">
+                                    <img src="/images/Image-BintangBG.svg" alt="Star" className="w-5 h-5" />
                                     New: Our AI integration just landed
                                 </div>
                             </div>
-
                             {/* Button */}
-                            <div className="flex justify-center md:justify-end w-full md:w-auto">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                            <div className="w-full flex justify-center md:justify-end">
+                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
                                 </button>
                             </div>
@@ -180,6 +191,6 @@ export default function RangkumBanking() {
                     </div>
                 </div>
             </section>
-        </div >
+        </div>
     );
 }

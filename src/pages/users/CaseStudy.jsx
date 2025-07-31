@@ -2,149 +2,56 @@ import React from 'react';
 
 export default function CaseStudy() {
     return (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-black via-blue-900 to-slate-900">
-            <div className="max-w-7xl mx-auto">
-                {/* Header */}
-                <div className="text-center mb-14">
-                    <h1 className="text-4xl font-bold text-white mb-3 drop-shadow" style={{ textShadow: '0 0 8px #2563eb55' }}>
-                        CaseStudy
-                    </h1>
-                    <p className="text-lg text-white/70 mb-6">
-                        Stay ahead of the curve with our curated articles on AI, IT trends, automation, and real-world case studies
-                    </p>
-                    <div className="border-t border-blue-900/40 my-6"></div>
-                </div>
-
-                {/* Blog Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG1"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG1
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+        <section className="min-h-screen bg-[#F6FBFF] text-[#1A2B4C] font-inter">
+                    {/* Banner Background */}
+                    <div className="relative w-full h-[320px] md:h-[340px] flex items-center justify-center overflow-hidden">
+                        <img
+                            src="/images/Banner/ImagesBanner001.svg"
+                            alt="Banner"
+                            className="absolute inset-0 w-full h-full object-cover z-0"
+                            draggable={false}
+                        />
+                        <div className="relative z-10 w-full flex flex-col items-center justify-center h-full px-4">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-center drop-shadow-lg">
+                                Case Study
+                            </h1>
+                            <p className="text-lg md:text-xl text-white mb-2 text-center drop-shadow">
+                                Stay ahead of the curve with our curated articles on AI, IT trends, automation, and real-world case studies
                             </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
                         </div>
                     </div>
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG2"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG2
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
-                        </div>
-                    </div>
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG3"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG3
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
+        
+                    {/* Blog Grid */}
+                    <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            {[1, 2, 3, 4, 5, 6].map((i) => (
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-2xl overflow-hidden border border-[#D6E6F7] shadow-[0_4px_24px_rgba(74,158,255,0.08)] flex flex-col items-center justify-center py-8 px-6 transition-all duration-300 hover:shadow-lg"
+                                    style={{
+                                        boxShadow: "0 0 24px 2px #2196F3, 0 0 0 2px #2196F3",
+                                    }}
+                                >
+                                    <h3 className="text-xl font-semibold text-[#0377FF] mb-4 text-center">BLOG1</h3>
+                                    <div className="w-full flex justify-center mb-4">
+                                        <img
+                                            src="/images/DummyContent.svg"
+                                            alt={`BLOG${i}`}
+                                            className="w-full max-w-[220px] h-[120px] object-cover rounded-lg"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col items-center gap-2">
+                                        <span className="inline-block px-3 py-1 rounded-full bg-[#F0F7FF] text-[#0377FF] text-xs font-medium mb-2 shadow">
+                                            AI is taking notes.
+                                        </span>
+                                        <p className="text-[#0377FF] text-sm text-center mb-2">
+                                            This section is a sample blog content.
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG4"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG4
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
-                        </div>
-                    </div>
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG5"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG5
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
-                        </div>
-                    </div>
-                    <div className="group bg-slate-900/80 rounded-2xl overflow-hidden shadow-lg border border-[#489CFF]/30 hover:border-[#489CFF]/60 hover:bg-[#489CFF]/10 transition-all duration-300 flex flex-col"
-                        style={{ boxShadow: '0 0 24px 4px rgba(72,156,255,0.10)' }}>
-                        <div className="overflow-hidden">
-                            <img
-                                src="/images/DummyContent.svg"
-                                alt="BLOG6"
-                                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                            <h3 className="text-2xl font-semibold text-[#489CFF] mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                                BLOG6
-                            </h3>
-                            <p className="text-white/70 mb-4 flex-1">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                            <button className="self-start text-[#489CFF] font-medium hover:text-blue-400 transition-colors duration-300">
-                                Read More →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
     );
 }

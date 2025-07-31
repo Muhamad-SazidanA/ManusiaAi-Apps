@@ -2,105 +2,102 @@ import React from 'react';
 
 export default function BrilianFMGC() {
   return (
-    <div className="w-full min-h-screen bg-white text-[#1A62DC] font-inter relative overflow-x-hidden">
+    <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
       {/* Hero Section */}
-      <section className="min-h-screen py-20 px-6 md:px-16 flex items-center justify-center bg-white overflow-hidden relative">
-
-        <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-0 md:px-10 gap-10">
+      <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-0">
+        <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           {/* Kiri: Teks dan Button */}
-          <div className="flex-1 flex flex-col items-start justify-center">
-            <div className="absolute -translate-x-[70px] -translate-y-[50px]">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-[1.3] pb-[10px] text-blue-700">
-                Streamline Knowledge & <br />
-                Operations in the <br />
-                FMCG Industry
-              </h1>
-              <p className="text-base md:text-2xl text-blue-800 mb-8 font-medium max-w-lg text-left">
-                Menyatukan Informasi Produk, Distribusi, dan Konsumen dalam Sekejap              </p>
-              <button className="bg-[#1669F2] hover:bg-[#1257C3] text-white px-6 py-3 rounded-md font-semibold shadow-md transition-all duration-200">
-                Request Demo
-              </button>
-            </div>
+          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-inter mb-5 leading-[1.3] pb-[10px]">
+              <span className="bg-[#0377FF] text-transparent bg-clip-text whitespace-nowrap">
+                Streamline Knowledge &<br />Operations in the<br />FMCG Industry
+              </span>
+            </h1>
+            <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg text-[#0377FF] text-left">
+              Menyatukan Informasi Produk, Distribusi, dan Konsumen dalam Sekejap
+            </p>
+            <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+              Request Demo
+            </button>
           </div>
-
           {/* Kanan: Gambar */}
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
             <img
               src="/images/BrilianAi/BrilianFMGC/BrilianFMGC1.svg"
-              alt="Banking Chart"
-              className="absolute z-1 w-full max-w-lg md:max-w-1xl h-auto object-contain drop-shadow-2xl translate-x-[50px] translate-y-[50px]"
+              alt="HR Document Management"
+              className="w-full max-w-md"
             />
           </div>
         </div>
       </section>
 
-      {/* Solusi Brilian.AI Section */}
-      <section className="relative py-16 bg-white overflow-hidden">
-        <div className="relative max-w-6xl mx-auto px-10">
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#1A62DC] mb-8 text-center">Solusi dari Brilian.AI</h2>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="space-y-6">
-              <p className="text-2xl font-normal leading-relaxed ml-[-70px] mt-[-90px]">
-                Brilian.AI membantu perusahaan FMCG <br />
-                menemukan, merangkum, dan menjawab <br />
-                informasi penting—seperti spesifikasi produk atau <br />
-                laporan distribusi—langsung dari dokumen <br />
-                internal, cukup dengan bertanya layaknya ke <br />
-                ChatGPT internal.
-              </p>
-            </div>
-            <div className="flex justify-center relative z-10">
-              <img
-                src="/images/BrilianAi/BrilianFMGC/BrilianFMGC2.svg"
-                alt="Solusi Brilian.AI"
-                className="w-full max-w-md h-auto object-contain scale-[1.5] translate-y-[100px] translate-x-[50px]"
-              />
-            </div>
+      {/*Section Solusi dari Brilian.AI*/}
+      <section className="relative py-16 overflow-hidden px-4 md:px-0">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-20 text-left md:text-center w-full">
+              Solusi dari Brilian.AI
+            </h2>
+        <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+            <p className="text-base md:text-2xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
+              Brilian.AI membantu perusahaan FMCG menemukan, merangkum, dan menjawab informasi penting—seperti spesifikasi produk atau laporan distribusi—langsung dari dokumen internal, cukup dengan bertanya layaknya ke ChatGPT internal.
+            </p>
+          </div>
+          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+            <img
+              src="/images/BrilianAi/BrilianFMGC/BrilianFMGC2.svg"
+              alt="Solusi Brilian.AI"
+              className="w-full max-w-md h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="relative py-16 bg-white overflow-hidden">
-        <h3 className="text-4xl md:text-5xl font-semibold text-[#1A62DC] mb-40 text-center">
-          Benefits for FMCG Companies
-        </h3>
-        <div className="max-w-6xl mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-12">
+      <section className="relative py-16 overflow-hidden px-4 md:px-0">
+        <h3 className="relative z-20 text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center"> Benefits for FMCG Companies</h3>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1">
-            <ul className="space-y-6">
-              {[
-                "Kurangi waktu pencarian data operasional hingga 80%",
-                "Permudah pelatihan tim distribusi & marketing",
-                "Tingkatkan ketepatan jawaban di lapangan",
-                "Mendorong kolaborasi lintas fungsi & regional",
-              ].map((text, idx) => (
-                <li key={idx} className="flex items-center gap-6 ml-[-30px]">
-                  <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC]" />
-                  <span className="text-2xl leading-relaxed">{text}</span>
-                </li>
-              ))}
+            <ul className="space-y-6 relative z-20">
+              <li className="flex items-center gap-6 ml-[-30px]">
+                <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed ">Kurangi waktu pencarian<br />data operasional hingga<br />80%</span>
+              </li>
+              <li className="flex items-center gap-6 ml-[-30px]">
+                <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Permudah pelatihan tim<br />distribusi & marketing</span>
+              </li>
+              <li className="flex items-center gap-6 ml-[-30px]">
+                <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Tingkatkan ketepatan<br />jawaban di lapangan</span>
+              </li>
+              <li className="flex items-center gap-6 ml-[-30px]">
+                <span className="w-8 h-8 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Mendorong kolaborasi lintas<br /> fungsi & regional</span>
+              </li>
             </ul>
           </div>
-          <div className="flex-none w-[180px] md:w-[280px] relative">
+          <div className="flex-none w-[180px] md:w-[280px] relative z-10">
             <img
               src="/images/BrilianAi/BrilianFMGC/BrilianFMGC3.svg"
-              alt="FMGC Chart"
-              className="w-full max-w-md h-auto object-contain scale-[2.2] translate-y-[100px] translate-x-[50px] mb-[100px]"
+              alt="Banking Chart"
+              className="w-full max-w-md h-auto object-contain scale-[2.2] -translate-x-[60px] translate-y-[30px] mb-[100px]"
             />
           </div>
         </div>
       </section>
 
       {/* deskripsi */}
-      <section className="py-20 bg-white text-center">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#1A62DC] mb-6">
-          Waktunya Bekerja Lebih Cepat & <br /> Cerdas di Industri Cepat Saji        </h2>
-        <p className="text-lg md:text-xl text-[#1A62DC] max-w-2xl mx-auto leading-relaxed">
-          Brilian.AI bantu perusahaan FMCG menangani aliran informasi yang padat dan dinamis secara efisien.        </p>
+      <section className="py-16 bg-white text-center px-4 md:px-0">
+        <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
+          Waktunya Bekerja Lebih Cepat &<br />Cerdas di Industri Cepat Saji
+        </h2>
+        <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+          Brilian.AI bantu perusahaan FMCG menangani aliran informasi yang padat dan dinamis secara efisien.
+        </p>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden">
+      <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-0">
         {/* Card Container */}
         <div className="relative z-10 w-full flex justify-center items-center">
           <div
@@ -111,29 +108,31 @@ export default function BrilianFMGC() {
               border: "1px solid #d3eaff"
             }}
           >
+            <div className="absolute left-1/2 -translate-x-20 -translate-y-10 w-auto h-20 animate-pulse delay-500 opacity-30 z-30 pointer-events-none">
+              <img src="/images/Image-BintangBG.svg" alt="Star" className="w-full h-full" />
+            </div>
             {/* Left Side */}
             <div className="flex-1 text-left pr-0 md:pr-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0075FF] mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-2">
                 Get started today!
               </h2>
-              <p className="text-xl md:text-2xl font-medium text-[#0075FF]">
+              <p className="text-lg md:text-4xl font-light text-[#0377FF] max-w-3xl mx-auto leading-snug">
                 Siap Mempercepat Akses <br /> Pengetahuan Anda?
               </p>
             </div>
 
             {/* Right Side */}
-            <div className="flex-1 flex flex-col items-center md:items-end gap-4 w-full md:w-auto mt-8 md:mt-0">
+            <div className="flex-1 flex flex-col justify-center items-center gap-4 w-full md:w-auto mt-0">
               {/* Badge */}
-              <div className="flex justify-center w-full md:w-auto">
-                <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-sm font-medium shadow-md">
-                  <img src="/images/Image-BintangBG.svg" alt="Star" className="w-4 h-4" />
+              <div className="w-full flex justify-center md:justify-end">
+                <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-base font-medium shadow-md">
+                  <img src="/images/Image-BintangBG.svg" alt="Star" className="w-5 h-5" />
                   New: Our AI integration just landed
                 </div>
               </div>
-
               {/* Button */}
-              <div className="flex justify-center md:justify-end w-full md:w-auto">
-                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+              <div className="w-full flex justify-center md:justify-end">
+                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                   Request Demo
                 </button>
               </div>
