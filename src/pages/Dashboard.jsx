@@ -1,6 +1,10 @@
 import React from "react";
+import { Outlet, Link } from 'react-router-dom';
 
 export default function Dashboard() {
+  const handleNavigation = (url) => {
+    window.location.href = url; // Force reload the page
+  };
   return (
     <div className="w-full min-h-screen font-inter relative overflow-x-hidden">
       {/* Banner Section */}
@@ -35,7 +39,7 @@ export default function Dashboard() {
               Start for free
             </button>
           </div>
-        </div>  
+        </div>
 
         {/* Banner Images as background with dark overlay */}
         <div className="absolute left-0 top-0 w-full h-full z-0 flex items-center justify-center">
@@ -54,7 +58,7 @@ export default function Dashboard() {
           What is <span className="text-[#0377FF]">Manusia.AI</span>
         </h2>
         <div className="flex justify-center px-0 md:px-6">
-          <p className="text-base md:text-3xl font-inter font-normal text-black/90 text-center max-w-[60%] md:max-w-[70%] mt-2 mb-20">
+          <p className="text-base md:text-3xl font-inter font-light text-black/90 text-center max-w-[60%] md:max-w-[80%] mt-2 mb-20">
             Manusia.AI adalah perusahaan konsultan dan custom AI yang berbasis di Jakarta, yang berfokus pada penyediaan layanan konsultasi strategi AI
             dan pengembangan solusi AI kustom untuk kebutuhan perusahaan skala
             menengah hingga besar. Kami tidak hanya memberikan saran strategis,
@@ -86,15 +90,15 @@ export default function Dashboard() {
               Our Mission
             </lu>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[-20px]">
+              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
                 <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
                 <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed ">Percepat waktu respon klaim<br />& underwriting</span>
               </li>
-              <li className="flex items-center gap-6 ml-[-20px]">
+              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
                 <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
                 <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed">Pengambilan keputusan<br />lebih cepat & berbasis data</span>
               </li>
-              <li className="flex items-center gap-6 ml-[-20px]">
+              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
                 <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
                 <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed">Kurangi kesalahan akibat<br /> misinterpretasi dokumen</span>
               </li>
@@ -127,9 +131,10 @@ export default function Dashboard() {
             <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left mb-12">
               brilian.ai merupakan AI-powered knowledge management platform yang membantu organisasi mengakses informasi internal secara cepat,cerdas, dan aman.Dengan pencarian kontekstual dan otomatisasi dokumen.
             </span>
-            <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+            <Link onClick={() => handleNavigation('/demo-email')}
+              className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
               Request Demo
-            </button>
+            </Link>
           </div>
           <div className="flex-1 flex items-center justify-center px-0 md:px-6">
             <img
@@ -202,9 +207,10 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="mt-12 items-center flex justify-center">
-          <button className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
+          <Link onClick={() => handleNavigation('/demo-email')}
+            className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
             Request Demo
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -219,14 +225,15 @@ export default function Dashboard() {
         <p className="text-semibold md:text-3xl text-[#0377FF] flex justify-center text-center px-0 md:px-6 mb-20">
           yang membantu organisasi mengakses informasi internal secara<br />cepat,cerdas, dan aman
         </p>
-        <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
             <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left mb-12">
               Rangkum.ai adalah platform Intelligent Document Processing (IDP)berbasis AI yang membantu organisasi mengotomatisasi ekstraksi,pemrosesan, dan peringkasan dokumen, dari PDF, formulir, hingga laporan kompleks
             </span>
-            <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+            <Link onClick={() => handleNavigation('/demo-email')}
+              className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
               Request Demo
-            </button>
+            </Link>
           </div>
           <div className="flex-1 flex items-center justify-center px-0 md:px-6">
             <img
@@ -247,20 +254,20 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-id-card text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">Identitas</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">Identitas</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">KTP</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">KTP</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">SIM</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">SIM</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Passport</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Passport</span>
               </li>
             </ul>
           </div>
@@ -269,24 +276,24 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-file-invoice-dollar text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">Finansial</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">Finansial</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Invoice</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Invoice</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Faktur</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Faktur</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">NPWP</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">NPWP</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekening Koran</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekening Koran</span>
               </li>
             </ul>
           </div>
@@ -295,20 +302,20 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-file-contract text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">Legal</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">Legal</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Akta</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Akta</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">SIUP</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">SIUP</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">NIB</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">NIB</span>
               </li>
             </ul>
           </div>
@@ -317,20 +324,20 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-user-tie text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">HR</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">HR</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Ijazah</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Ijazah</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">CV</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">CV</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Transkrip</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Transkrip</span>
               </li>
             </ul>
           </div>
@@ -339,20 +346,20 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-file-alt text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">Format</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">Format</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">PDF</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">PDF</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">JPG</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">JPG</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">PNG</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">PNG</span>
               </li>
             </ul>
           </div>
@@ -361,43 +368,44 @@ export default function Dashboard() {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center gap-4 mb-4">
               <i className="fa-solid fa-file-medical text-[#0377FF] text-3xl"></i>
-              <h3 className="text-xl font-semibold text-[#0377FF]">Kesehatan</h3>
+              <h3 className="text-2xl font-semibold text-[#0377FF]">Kesehatan</h3>
             </div>
             <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekam Medis</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekam Medis</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Surat Rujukan</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Surat Rujukan</span>
               </li>
-              <li className="flex items-center gap-6">
-                <span className="w-6 h-6 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed">Kuitansi RS</span>
+              <li className="flex items-center gap-6 ml-[20px]">
+                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
+                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Kuitansi RS</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-12">
-          <button className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
+          <Link onClick={() => handleNavigation('/demo-email')}
+            className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
             Request Demo
-          </button>
+          </Link>
         </div>
       </section>
 
-      {/* deskripsi */}
-      <section className="py-16 bg-white text-center px-4 md:px-0">
-        <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
-          Siap Bangun Solusi AI yang<br /> Relevan untuk Bisnis Anda?
-        </h2>
-        <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
-          Mari diskusi dan mulai dari yang paling berdampak.
-        </p>
-      </section>
-
       {/* CTA Section */}
-      <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-0">
+      <section className="relative py-24 bg-white flex flex-col items-center justify-center overflow-hidden px-4 md:px-0">
+        {/* Deskripsi */}
+        <div className="text-center mb-12">
+          <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-4 leading-tight">
+            Siap Bangun Solusi AI yang<br /> Relevan untuk Bisnis Anda?
+          </h2>
+          <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+            Mari diskusi dan mulai dari yang paling berdampak.
+          </p>
+        </div>
+
         {/* Card Container */}
         <div className="relative z-10 w-full flex justify-center items-center">
           <div
@@ -432,9 +440,10 @@ export default function Dashboard() {
               </div>
               {/* Button */}
               <div className="w-full flex justify-center md:justify-end">
-                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                <Link onClick={() => handleNavigation('/demo-email')}
+                  className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                   Request Demo
-                </button>
+                </Link>
               </div>
             </div>
           </div>

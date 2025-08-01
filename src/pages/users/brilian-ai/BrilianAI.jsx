@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BriliamAI() {
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
@@ -16,9 +20,10 @@ export default function BriliamAI() {
                         <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg  text-left">
                             Accelerate Decisions with AI-Powered Knowledge Management
                         </p>
-                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                        <Link onClick={() => handleNavigation('/demo-email')}
+                            className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                     {/* Kanan: Gambar */}
                     <div className="flex-1 flex items-center justify-center px-0 md:px-6">
@@ -201,9 +206,10 @@ export default function BriliamAI() {
                             </div>
                             {/* Button */}
                             <div className="w-full flex justify-center md:justify-end">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                                <Link onClick={() => handleNavigation('/demo-email')}
+                                    className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

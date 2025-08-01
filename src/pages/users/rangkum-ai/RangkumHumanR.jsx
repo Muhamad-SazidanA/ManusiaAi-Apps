@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 export default function RangkumHumanR() {
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
     const fadeIn = (direction = 'left') => ({
         hidden: {
             opacity: 0,
@@ -256,30 +260,19 @@ export default function RangkumHumanR() {
                 </div>
             </motion.section>
 
-            {/* Deskripsi */}
-            <motion.section
-                className="py-16 bg-white text-center px-4 md:px-12"
-                variants={fadeIn}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.8 }}
-            >
-                <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
-                    Ingin Lihat Langsung?
-                </h2>
-                <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
-                    Temukan bagaimana Rangkum.AI dapat memangkas waktu pemrosesan klaim dan meningkatkan pengalaman nasabah Anda.
-                </p>
-            </motion.section>
-
             {/* CTA Section */}
-            <motion.section
-                className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-12"
-                variants={fadeIn}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.8 }}
-            >
+            <section className="relative py-24 bg-white flex flex-col items-center justify-center overflow-hidden px-4 md:px-0">
+                {/* Deskripsi */}
+                <div className="text-center mb-12">
+                    <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-4 leading-tight">
+                        Ingin Lihat Langsung?
+                    </h2>
+                    <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+                        Temukan bagaimana Rangkum.AI dapat memangkas waktu pemrosesan klaim dan meningkatkan pengalaman nasabah Anda.
+                    </p>
+                </div>
+
+                {/* Card Container */}
                 <div className="relative z-10 w-full flex justify-center items-center">
                     <div
                         className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl px-8 py-10 rounded-2xl"
@@ -292,42 +285,36 @@ export default function RangkumHumanR() {
                         <div className="absolute left-1/2 -translate-x-20 -translate-y-10 w-auto h-20 animate-pulse delay-500 opacity-30 z-30 pointer-events-none">
                             <img src="/images/Image-BintangBG.svg" alt="Star" className="w-full h-full" />
                         </div>
-                        <motion.div
-                            className="flex-1 text-left pr-0 md:pr-10"
-                            variants={slideInLeft}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 0.8 }}
-                        >
+                        {/* Left Side */}
+                        <div className="flex-1 text-left pr-0 md:pr-10">
                             <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-2">
                                 Get started today!
                             </h2>
                             <p className="text-lg md:text-4xl font-light text-[#0377FF] max-w-3xl mx-auto leading-snug">
                                 Siap Mempercepat Akses <br /> Pengetahuan Anda?
                             </p>
-                        </motion.div>
-                        <motion.div
-                            className="flex-1 flex flex-col justify-center items-center gap-4 w-full md:w-auto mt-0"
-                            variants={slideInRight}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 0.8 }}
-                        >
+                        </div>
+
+                        {/* Right Side */}
+                        <div className="flex-1 flex flex-col justify-center items-center gap-4 w-full md:w-auto mt-0">
+                            {/* Badge */}
                             <div className="w-full flex justify-center md:justify-end">
                                 <div className="inline-flex items-center gap-2 bg-[#0075FF] text-white px-6 py-2 rounded-full text-base font-medium shadow-md">
                                     <img src="/images/Image-BintangBG.svg" alt="Star" className="w-5 h-5" />
                                     New: Our AI integration just landed
                                 </div>
                             </div>
+                            {/* Button */}
                             <div className="w-full flex justify-center md:justify-end">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                                <Link onClick={() => handleNavigation('/demo-email')}
+                                    className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
-                                </button>
+                                </Link>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
-            </motion.section>
+            </section>
         </div>
     );
 }

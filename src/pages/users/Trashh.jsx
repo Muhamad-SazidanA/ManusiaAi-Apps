@@ -142,9 +142,11 @@ export default function Trashh() {
                                 Read More →
                             </button>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </section>
+        
     );
 }

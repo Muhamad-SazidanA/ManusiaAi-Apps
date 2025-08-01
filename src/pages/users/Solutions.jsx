@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Solutions() {
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
@@ -16,9 +20,10 @@ export default function Solutions() {
                         <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg  text-left">
                             Kami bangun solusi AI yang relevan, kustom, dan berdampak nyata. untuk bisnis Anda.
                         </p>
-                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                        <Link onClick={() => handleNavigation('/demo-email')}
+                            className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                     {/* Kanan: Gambar */}
                     <div className="flex-1 flex items-center justify-center px-0 md:px-6">
@@ -36,7 +41,7 @@ export default function Solutions() {
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#0377FF] mb-20 text-center">Our Services</h3>
                 <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             AI Readiness &<br /> Opportunity Assessment
                         </h2>
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
@@ -54,7 +59,7 @@ export default function Solutions() {
                 <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
                 <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Custom AI Development
                         </h2>
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
@@ -72,7 +77,7 @@ export default function Solutions() {
                 <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
                 <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Integration with Existing<br />Systems
                         </h2>
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
@@ -90,7 +95,7 @@ export default function Solutions() {
                 <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
                 <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Proof-of-Concept &<br />Scalable Deployment
                         </h2>
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
@@ -108,7 +113,7 @@ export default function Solutions() {
                 <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
                 <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             AI Lifecycle Support &<br />Optimisation
                         </h2>
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
@@ -168,7 +173,17 @@ export default function Solutions() {
             </section>
 
             {/* CTA Section */}
-            <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-0">
+            <section className="relative py-24 bg-white flex flex-col items-center justify-center overflow-hidden px-4 md:px-0">
+                {/* Deskripsi */}
+                <div className="text-center mb-12">
+                    <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-4 leading-tight">
+                        Siap Bangun Solusi AI yang<br /> Relevan untuk Bisnis Anda?
+                    </h2>
+                    <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+                        Mari diskusi dan mulai dari yang paling berdampak.
+                    </p>
+                </div>
+
                 {/* Card Container */}
                 <div className="relative z-10 w-full flex justify-center items-center">
                     <div
@@ -203,9 +218,10 @@ export default function Solutions() {
                             </div>
                             {/* Button */}
                             <div className="w-full flex justify-center md:justify-end">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                                <Link onClick={() => handleNavigation('/demo-email')}
+                                    className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BrilianInsurance() {
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
@@ -16,9 +20,10 @@ export default function BrilianInsurance() {
                         <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg  text-left">
                             Otomatisasi pemrosesan dokumen klaim dan polis — tanpa input manual, tanpa kesalahan.
                         </p>
-                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                        <Link onClick={() => handleNavigation('/demo-email')}
+                            className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                     {/* Kanan: Gambar */}
                     <div className="flex-1 flex items-center justify-center px-0 md:px-6">
@@ -148,18 +153,18 @@ export default function BrilianInsurance() {
                 </div>
             </section>
 
-            {/* deskripsi */}
-            <section className="py-16 bg-white text-center px-4 md:px-12">
-                <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
-                    Ingin Lihat Langsung?
-                </h2>
-                <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
-                    Temukan bagaimana Rangkum.AI dapat memangkas waktu pemrosesan klaim dan meningkatkan pengalaman nasabah Anda.
-                </p>
-            </section>
-
             {/* CTA Section */}
-            <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-12">
+            <section className="relative py-24 bg-white flex flex-col items-center justify-center overflow-hidden px-4 md:px-0">
+                {/* Deskripsi */}
+                <div className="text-center mb-12">
+                    <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-4 leading-tight">
+                        Ingin Lihat Langsung?
+                    </h2>
+                    <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
+                        Temukan bagaimana Rangkum.AI dapat memangkas waktu pemrosesan klaim dan meningkatkan pengalaman nasabah Anda.
+                    </p>
+                </div>
+
                 {/* Card Container */}
                 <div className="relative z-10 w-full flex justify-center items-center">
                     <div
@@ -194,9 +199,10 @@ export default function BrilianInsurance() {
                             </div>
                             {/* Button */}
                             <div className="w-full flex justify-center md:justify-end">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                                <Link onClick={() => handleNavigation('/demo-email')}
+                                    className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

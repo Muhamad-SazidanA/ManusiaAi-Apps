@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function RangkumAi() {
+    const handleNavigation = (url) => {
+        window.location.href = url; // Force reload the page
+    };
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
@@ -16,9 +20,10 @@ export default function RangkumAi() {
                         <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg  text-left">
                             Intelligent Document Processing & Smart OCR Platform
                         </p>
-                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                        <Link onClick={() => handleNavigation('/demo-email')}
+                            className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                     {/* Kanan: Gambar */}
                     <div className="flex-1 flex items-center justify-center px-0 md:px-6">
@@ -35,16 +40,17 @@ export default function RangkumAi() {
             <section className="relative py-16 overflow-hidden px-4 md:px-0">
                 <h2 className="relative text-4xl md:text-5xl font-semibold text-black/90 mb-8 text-center">
                     What is{" "}
-                <span className="text-[#0377FF] mb-20">Rangkum.AI?</span>
+                    <span className="text-[#0377FF] mb-20">Rangkum.AI?</span>
                 </h2>
                 <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-10">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <p className="text-1xl md:text-3xl font-inter font-normal text-[#0377FF] leading-relaxed max-w-lg text-left mb-12">
                             Rangkum.AI adalah platform Intelligent Document Processing (IDP) berbasis AI yang membantu organisasi mengotomatisasi ekstraksi,pemrosesan, dan peringkasan dokumen, dari PDF, formulir, hingga laporan kompleks
                         </p>
-                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                        <Link onClick={() => handleNavigation('/demo-email')}
+                            className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
                             Request Demo
-                        </button>
+                        </Link>
                     </div>
                     <div className="flex-1 flex items-center justify-center px-0 md:px-6">
                         <img
@@ -221,9 +227,10 @@ export default function RangkumAi() {
                             </div>
                             {/* Button */}
                             <div className="w-full flex justify-center md:justify-end">
-                                <button className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
+                                <Link onClick={() => handleNavigation('/demo-email')}
+                                    className="bg-[#0075FF] hover:bg-[#0066e0] text-white text-lg font-bold px-8 py-3 rounded-xl shadow-lg border border-[#A4D1FF] transition-transform transform hover:scale-105">
                                     Request Demo
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
