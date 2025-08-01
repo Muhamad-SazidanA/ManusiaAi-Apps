@@ -52,345 +52,629 @@ export default function Dashboard() {
           />
         </div>
       </section>
-      {/*Section Solusi dari Brilian.AI*/}
-      <section className="relative py-20 overflow-hidden px-4 md:px-0">
-        <h2 className="relative text-4xl md:text-5xl font-semibold text-[#00000] mb-20 text-center">
-          What is <span className="text-[#0377FF]">Manusia.AI</span>
-        </h2>
-        <div className="flex justify-center px-0 md:px-6">
-          <p className="text-base md:text-3xl font-inter font-light text-black/90 text-center max-w-[60%] md:max-w-[80%] mt-2 mb-20">
-            Manusia.AI adalah perusahaan konsultan dan custom AI yang berbasis di Jakarta, yang berfokus pada penyediaan layanan konsultasi strategi AI
-            dan pengembangan solusi AI kustom untuk kebutuhan perusahaan skala
-            menengah hingga besar. Kami tidak hanya memberikan saran strategis,
-            kami juga membangun dan menerapkan solusi AI yang disesuaikan dengan
-            konteks dan tantangan spesifik bisnis setiap customer.
+      {/* Value Proposition Section */}
+      <section className="py-20 bg-white px-4 md:px-12">
+        <div className="max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-6">
+            Manusia.AI is your partner for<br />
+            <span className="text-[#0377FF]">Custom AI Platform & Consulting Services</span>
+          </h2>
+          <p className="text-lg md:text-2xl text-gray-800 max-w-4xl mx-auto">
+            Build and deploy tailored AI solutions—faster, scalable,<br />
+            and designed for real business impact.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
-          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-            <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-              Our Vision
-            </h2>
-            <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
-              Menjadi mitra transformasi AI terpercaya bagi perusahaan di Indonesia dan Asia Tenggara — dengan solusi yang relevan, berdampak nyata, dan mudah diadopsi.
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {/* Card 1 - Expertise */}
+          <div
+            className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col items-center"
+            style={{
+              boxShadow: "0 0 24px 8px rgba(33, 150, 243, 0.18)"
+            }}
+          >
+            <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#0377FF] flex items-center justify-center text-white">
+                <i className="fa-solid fa-brain text-white text-xl"></i>
+              </div>
+            </div>
+            <h3 className="font-bold text-lg text-[#0377FF] mb-3">Expertise</h3>
+            <p className="text-gray-600 text-sm text-center">
+              Kombinasi konsultan strategi + tim teknis AI
+              Kami tidak hanya membangun sistem AI, tapi juga memastikan solusi tersebut sesuai konteks bisnis dan siap berdampak nyata.
             </p>
           </div>
-          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-            <img
-              src="/images/Home/ImagesHome2.svg"
-              alt="HR Document Management"
-              className="w-full max-w-md h-auto"
-            />
-          </div>
-        </div>
-        <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-        <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
-          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-            <lu className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-              Our Mission
-            </lu>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
-                <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed ">Percepat waktu respon klaim<br />& underwriting</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
-                <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed">Pengambilan keputusan<br />lebih cepat & berbasis data</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px] ml-[20px]">
-                <span className="w-2 h-2 mt-1 rounded-full bg-black/90 flex-shrink-0" />
-                <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed">Kurangi kesalahan akibat<br /> misinterpretasi dokumen</span>
-              </li>
-            </ul>
-          </div>
-          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-            <img
-              src="/images/Home/ImagesHome3.svg"
-              alt="HR Document Management"
-              className="w-full max-w-md h-auto"
-            />
-          </div>
-        </div>
-        <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-      </section>
 
-      {/*Section Solusi dari Brilian.AI*/}
-      <section className="relative py-16 overflow-hidden px-4 md:px-0">
-        <h2 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-8 text-center">
-          Brilian.AI
-        </h2>
-        <p className="text-bold md:text-4xl text-black/90 flex justify-center text-center px-0 md:px-6">
-          AI-powered knowledge management platform
-        </p>
-        <p className="text-semibold md:text-3xl text-[#0377FF] flex justify-center text-center px-0 md:px-6 mb-20">
-          yang membantu organisasi mengakses informasi<br />internal secara cepat,cerdas, dan aman
-        </p>
-        <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-10">
-          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-            <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left mb-12">
-              brilian.ai merupakan AI-powered knowledge management platform yang membantu organisasi mengakses informasi internal secara cepat,cerdas, dan aman.Dengan pencarian kontekstual dan otomatisasi dokumen.
-            </span>
-            <Link onClick={() => handleNavigation('/demo-email')}
-              className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
-              Request Demo
-            </Link>
+          {/* Card 2 - Integrasi */}
+          <div
+            className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col items-center"
+            style={{
+              boxShadow: "0 0 24px 8px rgba(33, 150, 243, 0.18)"
+            }}
+          >
+            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white">
+                <i className="fa-solid fa-plug-circle-check text-white text-xl"></i>
+              </div>
+            </div>
+            <h3 className="font-bold text-lg text-green-600 mb-3">Integrasi</h3>
+            <p className="text-gray-600 text-sm text-center">
+              Solusi AI yang langsung terhubung dengan sistem Anda Tidak perlu ganti infrastruktur—kami rancang dan integrasikan AI ke dalam sistem dan alur kerja yang sudah berjalan.
+            </p>
           </div>
-          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-            <img
-              src="/images/Home/ImagesHome4.svg"
-              alt="Solusi Rangkum.AI"
-              className="w-full max-w-md h-auto"
-            />
+
+          {/* Card 3 - Efisiensi */}
+          <div
+            className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col items-center"
+            style={{
+              boxShadow: "0 0 24px 8px rgba(33, 150, 243, 0.18)"
+            }}
+          >
+            <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white">
+                <i className="fa-solid fa-gauge-high text-white text-xl"></i>
+              </div>
+            </div>
+            <h3 className="font-bold text-lg text-orange-600 mb-3">Efisiensi</h3>
+            <p className="text-gray-600 text-sm text-center">
+              Hemat waktu, tenaga, dan biaya operasional. Dengan AI untuk otomasi tugas manual, pembuatan laporan, dan knowledge discovery yang memangkas biaya format hingga 60-80% waktu kerja tim.
+            </p>
+          </div>
+
+          {/* Card 4 - Time-to-Impact */}
+          <div
+            className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col items-center"
+            style={{
+              boxShadow: "0 0 24px 8px rgba(33, 150, 243, 0.18)"
+            }}
+          >
+            <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                <i className="fa-solid fa-rocket text-white text-xl"></i>
+              </div>
+            </div>
+            <h3 className="font-bold text-lg text-blue-600 mb-3">Time-to-Impact</h3>
+            <p className="text-gray-600 text-sm text-center">
+              Implementasi cepat, hasil langsung terasa. Kami kembangkan model AI yang sudah terlatih untuk yang mempersingkat proses dari ide ke produktivitas.
+            </p>
+          </div>
+
+          {/* Card 5 - Keamanan & Kepatuhan */}
+          <div
+            className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col items-center"
+            style={{
+              boxShadow: "0 0 24px 8px rgba(33, 150, 243, 0.18)"
+            }}
+          >
+            <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <i className="fa-solid fa-shield-halved text-white text-xl"></i>
+              </div>
+            </div>
+            <h3 className="font-bold text-lg text-purple-600 text-center mb-3">Keamanan & Kepatuhan</h3>
+            <p className="text-gray-600 text-sm text-center">
+              Sistem AI yang aman dengan regulasi mutakhir. Kami mengimplementasikan keamanan data, dengan pemisahan sensitif ID, PDPN, CBPR, dan praktik keamanan terbaik.
+            </p>
           </div>
         </div>
       </section>
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white px-4 md:px-12">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-12">
+            10 Why Choose Us for Your AI Journey?
+          </h2>
+        </div>
 
-      <section className="relative py-16 overflow-hidden px-4 bg-[#0377FF] md:px-0">
-        <h2 className="relative text-4xl md:text-5xl font-semibold text-white mb-12 text-center">
-          AI-powered knowledge<br />management platform
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Card 1 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-question-circle text-[#0377FF]"></i> Tanya Apa Aja
-            </h3>
-            <p className="text-base text-gray-600">
-              Every meeting becomes notes, tasks, agendas, and follow-ups, automatically.
-            </p>
+          {/* Item 1 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                01
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Measurable Business Impact</h3>
+              <p className="text-gray-600 text-sm">
+                We don't promise fuzzy innovation. All our AI solutions are designed to increase efficiency, cut costs, and unlock actionable insights that align with quantifiable outcomes.
+              </p>
+            </div>
           </div>
-          {/* Card 2 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-file-alt text-[#0377FF]"></i> Buatin Laporan
-            </h3>
-            <p className="text-base text-gray-600">
-              Get trusted answers from every corner of your Workspace, instantly and in full context.
-            </p>
+
+          {/* Item 2 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                02
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Deep Industry & Technical Expertise</h3>
+              <p className="text-gray-600 text-sm">
+                Our team combines deep consulting experience with deep domain understanding—whether you're in healthcare, manufacturing, finance, or retail.
+              </p>
+            </div>
           </div>
-          {/* Card 3 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-chart-line text-[#0377FF]"></i> Analisa Laporan
-            </h3>
-            <p className="text-base text-gray-600">
-              Turn ideas into visuals, writing, and tasks with zero prompt engineering or manual work.
-            </p>
+
+          {/* Item 3 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                03
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">End-to-End Solutions</h3>
+              <p className="text-gray-600 text-sm">
+                From strategy and planning to deployment and seamless integration, we provide full-cycle support across the entire AI journey.
+              </p>
+            </div>
           </div>
-          {/* Card 4 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-search text-[#0377FF]"></i> Riset Market
-            </h3>
-            <p className="text-base text-gray-600">
-              Every meeting becomes notes, tasks, agendas, and follow-ups, automatically.
-            </p>
+
+          {/* Item 4 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                04
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Customized to Your Business</h3>
+              <p className="text-gray-600 text-sm">
+                No one-size-fits-all here. Every solution is tailored to your specific data, workflow, and business context.
+              </p>
+            </div>
           </div>
-          {/* Card 5 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-lightbulb text-[#0377FF]"></i> Pikirkan Ide
-            </h3>
-            <p className="text-base text-gray-600">
-              Get trusted answers from every corner of your Workspace, instantly and in full context.
-            </p>
+
+          {/* Item 5 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                05
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Faster Time to Value</h3>
+              <p className="text-gray-600 text-sm">
+                With modular components, proven frameworks, and accelerated deployment modules, we shorten your path from idea to implementation.
+              </p>
+            </div>
           </div>
-          {/* Card 6 */}
-          <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold text-[#0377FF] mb-4 flex items-center gap-2">
-              <i className="fa-solid fa-users text-[#0377FF]"></i> Rangkumin Meeting
-            </h3>
-            <p className="text-base text-gray-600">
-              Turn ideas into visuals, writing, and tasks with zero prompt engineering or manual work.
-            </p>
+
+          {/* Item 6 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                06
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Easy Integration with Existing Systems</h3>
+              <p className="text-gray-600 text-sm">
+                We build AI that works with—not against—your current infrastructure. We make the transition smoother with minimal disruption.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 7 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                07
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise-Grade Security & Compliance</h3>
+              <p className="text-gray-600 text-sm">
+                Our solutions are built with security, privacy, and regulatory compliance (like PDPN & GDPR) as fundamental requirements.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 8 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                08
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Human-Centered Approach</h3>
+              <p className="text-gray-600 text-sm">
+                We prioritize user adoption. Our AI is explainable, intuitive, and built to enhance human capabilities—not replace human talent.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 9 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                09
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Innovation with Stability</h3>
+              <p className="text-gray-600 text-sm">
+                We stay ahead of the curve with the latest AI innovations while ensuring stability, reliability, and ongoing improvement.
+              </p>
+            </div>
+          </div>
+
+          {/* Item 10 */}
+          <div className="bg-white rounded-xl p-6 border border-blue-100 relative overflow-hidden"
+            style={{
+              clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.08)"
+            }}>
+            <div className="absolute top-0 right-0">
+              <div className="w-16 h-16 rounded-full bg-[#0377FF] flex items-center justify-center text-white font-bold text-xl"
+                style={{
+                  boxShadow: "0 4px 10px rgba(3, 119, 255, 0.3)"
+                }}>
+                10
+              </div>
+            </div>
+            <div className="mt-10 pt-1 pl-1">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Dedicated Partnership, Not Just a Vendor</h3>
+              <p className="text-gray-600 text-sm">
+                We don't disappear after delivery. We act as your long-term AI partner, offering continual support, updates, and optimization.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="mt-12 items-center flex justify-center">
-          <Link onClick={() => handleNavigation('/demo-email')}
-            className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
-            Request Demo
+
+        <div className="mt-16 text-center">
+          <Link onClick={() => handleNavigation('/solutions')}
+            className="inline-flex items-center gap-2 bg-[#0377FF] text-white px-8 py-4 rounded-xl font-semibold shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200"
+          >
+            <span>Discover How We Can Help</span>
+            <i className="fas fa-arrow-right"></i>
           </Link>
         </div>
       </section>
 
-      {/*Section Solusi dari Brilian.AI*/}
-      <section className="relative py-16 overflow-hidden px-4 md:px-0">
-        <h2 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-8 text-center">
-          Rangkum.AI
-        </h2>
-        <p className="text-bold md:text-4xl text-black/90 flex justify-center text-center px-0 md:px-6">
-          Intelligent Document Processing (IDP)
-        </p>
-        <p className="text-semibold md:text-3xl text-[#0377FF] flex justify-center text-center px-0 md:px-6 mb-20">
-          yang membantu organisasi mengakses informasi internal secara<br />cepat,cerdas, dan aman
-        </p>
-        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-            <span className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left mb-12">
-              Rangkum.ai adalah platform Intelligent Document Processing (IDP)berbasis AI yang membantu organisasi mengotomatisasi ekstraksi,pemrosesan, dan peringkasan dokumen, dari PDF, formulir, hingga laporan kompleks
-            </span>
-            <Link onClick={() => handleNavigation('/demo-email')}
-              className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
-              Request Demo
-            </Link>
+      {/* Document Intelligence System Section */}
+      <section className="py-20 bg-white px-4 md:px-12 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          {/* Product Selection Tabs */}
+          <div className="flex justify-center mb-14">
+            <div className="flex gap-4 rounded-full p-2 bg-gray-100">
+              <button className="px-8 py-3 bg-[#0075FF] text-white font-medium rounded-full flex items-center gap-2 shadow-md">
+                <img src="/images/Home/LogoRangkumAiP.svg" alt="Rangkum.AI" className="w-30 h-10" />
+              </button>
+              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
+                <img src="/images/Home/LogoBrilianAiH.svg" alt="Brilian.AI" className="w-30 h-10" />
+              </button>
+              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
+                <img src="/images/Home/logoAdvinH.svg" alt="ADVIN" className="w-30 h-10" />
+              </button>
+            </div>
           </div>
-          <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-            <img
-              src="/images/Home/ImagesHome5.svg"
-              alt="Solusi Rangkum.AI"
-              className="w-full max-w-md h-auto"
-            />
+
+          {/* Content Section */}
+          <div className="flex flex-col md:flex-row items-start gap-10">
+            {/* Left Side - Mockup Image */}
+            <div className="flex-1">
+              <img
+                src="/images/Home/ImagesHomeRangkumAI.svg"
+                alt="Rangkum.AI Platform"
+                className="w-full max-w-md mx-auto"
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Document Intelligence System</h2>
+              <h3 className="text-xl md:text-2xl font-medium text-[#0377FF] mb-6">AI-Powered Document Automation Platform</h3>
+
+              <p className="text-gray-700 mb-8">
+                Rangkum.AI adalah platform cerdas untuk otomatisasi dokumen, dirancang untuk mengekstrak informasi penting dari berbagai dokumen seperti identitas, invoice, surat medis, dan formulir—tanpa template. Cocok untuk perusahaan di sektor keuangan, kesehatan, logistik, dan banyak lagi.
+              </p>
+
+              {/* Stats Section */}
+              <div className="grid grid-cols-3 gap-4 mb-10">
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">98%+</div>
+                  <div className="text-sm text-gray-600">Extraction Accuracy</div>
+                  <div className="text-xs text-gray-500">Untuk data penting dalam dokumen</div>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">100+</div>
+                  <div className="text-sm text-gray-600">Supported Types</div>
+                  <div className="text-xs text-gray-500">Termasuk invoice dan form</div>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">60%</div>
+                  <div className="text-sm text-gray-600">Process Time Reduction</div>
+                  <div className="text-xs text-gray-500">Versus manual & template processing</div>
+                </div>
+              </div>
+
+              {/* Key Modules */}
+              <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
+              <div className="grid grid-cols-3 gap-4 mb-10">
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">ID</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">ID & KYC Verification</h5>
+                  <p className="text-xs text-gray-500">Ekstraksi data identitas dari KTP, SIM, paspor, dan dokumen lain</p>
+                </div>
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">$</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">Invoice & Finance</h5>
+                  <p className="text-xs text-gray-500">Otomatis ekstrak, kelola, pakai, validasi invoice, dan bukti pembayaran</p>
+                </div>
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">+</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">Healthcare & Form</h5>
+                  <p className="text-xs text-gray-500">Memahami struktur resep medis, rekam medis digital, dengan teknologi tinggi medan</p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <i className="fa-solid fa-desktop text-[#0377FF]"></i>
+                  <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
+                </div>
+                <div className="space-y-3 pl-6">
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Ekstraksi data tanpa template/manual zoning</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>AI klasifikasi otomatis jenis dokumen</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Deteksi tabel kompleks & tulisan tangan</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Dukungan multibahasa (termasuk Bahasa Indonesia)</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Integrasi mudah dengan sistem ERP, CRM, RPA</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Model terus belajar dari dokumen baru</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Document Evidence Box */}
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
+                <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
+                  <i className="fa-solid fa-info text-xs"></i>
+                </div>
+                <div>
+                  <h5 className="font-medium text-sm text-gray-800 mb-1">Document Evidence</h5>
+                  <p className="text-xs text-gray-600">Rangkum.AI menyimpan dokumen asli sebagai bukti, lengkap dengan timestamp untuk proses audit/validasi dokumen secara historical.</p>
+                </div>
+              </div>
+
+              {/* Learn More Button */}
+              <div className="text-center md:text-left">
+                <Link onClick={() => handleNavigation('/rangkum-ai')}
+                  className="inline-block px-8 py-3 bg-[#0377FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+                  Learn More
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#0377FF] text-center px-4 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-          Supported Document Types
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Identitas */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-id-card text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">Identitas</h3>
+      {/* Knowledge Intelligence Platform Section */}
+      <section className="py-20 bg-white px-4 md:px-12 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          {/* Product Selection Tabs */}
+          <div className="flex justify-center mb-14">
+            <div className="flex gap-4 rounded-full p-2 bg-gray-100">
+              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
+                <img src="/images/Home/LogoRangkumAiH.svg" alt="Rangkum.AI" className="w-30 h-10" />
+              </button>
+              <button className="px-8 py-3 bg-[#0075FF] text-white font-medium rounded-full flex items-center gap-2 shadow-md">
+                <img src="/images/Home/LogoBrilianAiP.svg" alt="Brilian.AI" className="w-30 h-10" />
+              </button>
+              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
+                <img src="/images/Home/logoAdvinH.svg" alt="ADVIN" className="w-30 h-10" />
+              </button>
             </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">KTP</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">SIM</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Passport</span>
-              </li>
-            </ul>
           </div>
 
-          {/* Finansial */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-file-invoice-dollar text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">Finansial</h3>
+          {/* Content Section */}
+          <div className="flex flex-col md:flex-row items-start gap-10">
+            {/* Left Side - Mockup Image */}
+            <div className="flex-1">
+              <img
+                src="/images/Home/ImagesBrilianAI.svg"
+                alt="Brilian.AI Platform"
+                className="w-full max-w-md mx-auto"
+              />
             </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Invoice</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Faktur</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">NPWP</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekening Koran</span>
-              </li>
-            </ul>
-          </div>
 
-          {/* Legal */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-file-contract text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">Legal</h3>
-            </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Akta</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">SIUP</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">NIB</span>
-              </li>
-            </ul>
-          </div>
+            {/* Right Side - Content */}
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Knowledge Intelligence Platform</h2>
+              <h3 className="text-xl md:text-2xl font-medium text-[#0377FF] mb-6">AI-Powered Knowledge Assistant for Enterprise</h3>
 
-          {/* HR */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-user-tie text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">HR</h3>
-            </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Ijazah</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">CV</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Transkrip</span>
-              </li>
-            </ul>
-          </div>
+              <p className="text-gray-700 mb-8">
+                Brilian.AI adalah sistem AI cerdas yang membantu yang mampu menemukan dokumen internal, menjawab pertanyaan, menyusun laporan, hingga analisis data harian — semua dalam satu platform terintegrasi. Cocok untuk tim HR, legal, sales, customer service, hingga bisnis intelligence dalam membantu akes memori institusional.
+              </p>
 
-          {/* Format */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-file-alt text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">Format</h3>
-            </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">PDF</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">JPG</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">PNG</span>
-              </li>
-            </ul>
-          </div>
+              {/* Stats Section */}
+              <div className="grid grid-cols-3 gap-4 mb-10">
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">100+</div>
+                  <div className="text-sm text-gray-600">Integrasi Jenis File</div>
+                  <div className="text-xs text-gray-500">Termasuk PDF, Excel, Word, Email</div>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">90%</div>
+                  <div className="text-sm text-gray-600">Reduction Search Time</div>
+                  <div className="text-xs text-gray-500">Versus traditional search</div>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg text-center">
+                  <div className="text-[#0377FF] font-bold text-2xl">90%</div>
+                  <div className="text-sm text-gray-600">Less Errors</div>
+                  <div className="text-xs text-gray-500">Versus manual search</div>
+                </div>
+              </div>
 
-          {/* Kesehatan */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="flex items-center gap-4 mb-4">
-              <i className="fa-solid fa-file-medical text-[#0377FF] text-3xl"></i>
-              <h3 className="text-2xl font-semibold text-[#0377FF]">Kesehatan</h3>
+              {/* Key Modules */}
+              <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
+              <div className="grid grid-cols-3 gap-4 mb-10">
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">🔍</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">Tanya Apa Saja</h5>
+                  <p className="text-xs text-gray-500">Pencarian dokumen dan jawaban dengan bahasa alami seperti ChatGPT</p>
+                </div>
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">📊</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">Laporan & Insight Otomatis</h5>
+                  <p className="text-xs text-gray-500">Analisis dokumen, temukan tren, dan dapatkan ringkasan dari data yang kompleks</p>
+                </div>
+                <div className="bg-white border border-gray-200 p-4 rounded-lg">
+                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                    <span className="text-blue-600 text-sm font-bold">🔄</span>
+                  </div>
+                  <h5 className="font-medium text-sm mb-2">Meeting & Timeline Manager</h5>
+                  <p className="text-xs text-gray-500">Rekam percakapan rapat, ekstrak agenda dan tindak lanjut</p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <i className="fa-solid fa-desktop text-[#0377FF]"></i>
+                  <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
+                </div>
+                <div className="space-y-3 pl-6">
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Pemahaman bahasa natural (NLP) untuk pencarian cerdas total</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Integrasi mudah dengan folder cloud (Google Drive, OneDrive, dll)</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Bisa membaca berbagai format: PDF, Excel, Word, Email</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Analisis tren, kesimpulan, dan ringkasan otomatis</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Dapat digunakan oleh tim HR, Finance, Legal, hingga Management</span>
+                  </div>
+                  <div className="flex gap-2 items-center text-gray-700">
+                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                    <span>Aman, privat, dan dapat disesuaikan dengan alur kerja Anda</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Document Evidence Box */}
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
+                <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
+                  <i className="fa-solid fa-info text-xs"></i>
+                </div>
+                <div>
+                  <h5 className="font-medium text-sm text-gray-800 mb-1">Document Intelligence in Action</h5>
+                  <p className="text-xs text-gray-600">Brilian.AI terintegrasi langsung dengan proses bisnis harian untuk mengakses pengetahuan dari ribuan dokumen.</p>
+                </div>
+              </div>
+
+              {/* Learn More Button */}
+              <div className="text-center md:text-left">
+                <Link onClick={() => handleNavigation('/brilian-ai')}
+                  className="inline-block px-8 py-3 bg-[#0377FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+                  Learn More
+                </Link>
+              </div>
             </div>
-            <ul className="space-y-6 relative z-20">
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Rekam Medis</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Surat Rujukan</span>
-              </li>
-              <li className="flex items-center gap-6 ml-[20px]">
-                <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-b from-[#97BDFD] to-[#1A62DC] flex-shrink-0" />
-                <span className="text-1xl md:text-2xl font-inter font-normal text-[#0377FF] leading-relaxed">Kuitansi RS</span>
-              </li>
-            </ul>
           </div>
-        </div>
-        <div className="mt-12">
-          <Link onClick={() => handleNavigation('/demo-email')}
-            className="bg-white text-[#0377FF] px-8 py-4 rounded-xl font-semibold shadow hover:bg-[#EAF3FF] transition">
-            Request Demo
-          </Link>
         </div>
       </section>
 
@@ -412,7 +696,7 @@ export default function Dashboard() {
             className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl px-8 py-10 rounded-2xl"
             style={{
               background: "white",
-              boxShadow: "0 0 24px 4px #2196F3",
+              boxShadow: "0 0 24px 8px #2196F3",
               border: "1px solid #d3eaff"
             }}
           >

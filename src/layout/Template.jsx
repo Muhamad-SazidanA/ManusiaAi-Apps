@@ -32,7 +32,7 @@ export default function Template() {
                     {/* Logo - kiri */}
                     <div className="absolute left-0 top-1/2 -translate-y-1/2 ml-2" style={{ marginLeft: '-36px' }}>
                         <Link
-                            onClick={() => handleNavigation('/')}   
+                            onClick={() => handleNavigation('/')}
                             className="flex items-start gap-3"
                         >
                             <img src="/LogoUtama-Manusia.Ai.svg" alt="Manusia.AI" className="h-10 w-auto" />
@@ -51,7 +51,7 @@ export default function Template() {
                         </li>
                         <li>
                             <Link
-                                onClick={() => handleNavigation('/#')}
+                                onClick={() => handleNavigation('/about')}
                                 className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED]"
                             >
                                 About
@@ -221,32 +221,19 @@ export default function Template() {
                                 <i className="fas fa-chevron-down text-xs"></i>
                             </div>
                             <div
-                                className="absolute top-full left-0 mt-2 rounded-xl z-50 overflow-hidden
-                                transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                                min-w-[150px] bg-white border border-[#E5E7EB]"
+                                className="absolute top-full left-0 mt-2 rounded-xl z-50 overflow-hidden transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible min-w-[150px] bg-white border border-[#E5E7EB]"
                                 style={{
                                     boxShadow: '0 4px 20px rgba(25, 118, 237, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05)'
                                 }}
                             >
                                 <div className="p-3">
-                                    <Link
-                                        onClick={() => handleNavigation('/blog')}
-                                        className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
-                                    >
+                                    <Link onClick={() => handleNavigation('/blog')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full">
                                         <i className="fa-solid fa-brain text-[#1976ED] text-lg"></i> Blogs
                                     </Link>
-                                    <Link
-                                        onClick={() => handleNavigation('/events')}
-                                        className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
-
-                                    >
+                                    <Link onClick={() => handleNavigation('/events')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full">
                                         <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Events
                                     </Link>
-                                    <Link
-                                        onClick={() => handleNavigation('/casestudy')}
-                                        className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
-
-                                    >
+                                    <Link onClick={() => handleNavigation('/casestudy')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full">
                                         <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Case Study
                                     </Link>
                                 </div>
@@ -277,10 +264,9 @@ export default function Template() {
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
                         {/* Brand & Social */}
                         <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
-                            <img src="/Logo-PutihManusiaAi.svg" alt="Manusia.AI" className="h-10 w-auto mb-4" />
+                            <img src="/Logo-PutihManusiaAi.svg" alt="Manusia.AI" className="h-15 w-auto mb-4" />
                             <p className="text-white/70 text-sm max-w-xs mb-4 text-center md:text-left">
-                                Manusia.AI adalah konsultan & pengembang solusi AI kustom untuk bisnis Indonesia.
-                                Kami membantu perusahaan bertransformasi dengan teknologi AI yang relevan dan berdampak nyata.
+                                Di Manusia.AI, kami percaya bahwa teknologi AI seharusnya mudah diakses, relevan dengan konteks lokal, dan berdampak langsung bagi bisnis. Sebagai konsultan dan pengembang AI kustom, kami membantu perusahaan Indonesia menghadirkan efisiensi, inovasi, dan keputusan berbasis data secara menyeluruh.
                             </p>
                             <div className="flex gap-3 mt-2">
                                 <a href="#" className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/30 hover:bg-white/10 transition">

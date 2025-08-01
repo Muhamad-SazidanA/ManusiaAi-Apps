@@ -17,6 +17,7 @@ import RangkumInsurance from "../pages/users/rangkum-ai/RangkumInsurance";
 import RangkumHospital from "../pages/users/rangkum-ai/RangkumHospital";
 import RangkumHumanR from "../pages/users/rangkum-ai/RangkumHumanR";
 import Solutions from "../pages/users/Solutions";
+import About from "../pages/users/About";
 
 
 
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
             {
                 path: "solutions",
                 element: <Solutions />,
+            },
+            {
+                path: "about",
+                element: <About />,
             },
             {
                 path: "*",
