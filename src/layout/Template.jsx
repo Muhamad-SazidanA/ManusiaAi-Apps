@@ -221,7 +221,7 @@ export default function Template() {
                                 <i className="fas fa-chevron-down text-xs"></i>
                             </div>
                             <div
-                                className="absolute top-full left-0 mt-2 rounded-xl z-50 overflow-hidden transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible min-w-[150px] bg-white border border-[#E5E7EB]"
+                                className="absolute top-full left-0 mt-2 rounded-xl z-50 overflow-hidden transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible min-w-[160px] bg-white border border-[#E5E7EB]"
                                 style={{
                                     boxShadow: '0 4px 20px rgba(25, 118, 237, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05)'
                                 }}
@@ -233,7 +233,7 @@ export default function Template() {
                                     <Link onClick={() => handleNavigation('/events')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full">
                                         <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Events
                                     </Link>
-                                    <Link onClick={() => handleNavigation('/casestudy')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full">
+                                    <Link onClick={() => handleNavigation('/casestudy')} className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full whitespace-nowrap">
                                         <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Case Study
                                     </Link>
                                 </div>

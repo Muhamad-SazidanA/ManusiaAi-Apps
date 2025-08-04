@@ -1,216 +1,129 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
 export default function RangkumHumanR() {
     const handleNavigation = (url) => {
         window.location.href = url; // Force reload the page
     };
-    const fadeIn = (direction = 'left') => ({
-        hidden: {
-            opacity: 0,
-            x: direction === 'left' ? -100 : 100,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-        },
-    });
-
-    // Tambahkan slideInLeft dan slideInRight
-    const slideInLeft = {
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0 },
-    };
-
-    const slideInRight = {
-        hidden: { opacity: 0, x: 100 },
-        visible: { opacity: 1, x: 0 },
-    };
-
-    const Section = ({ children, direction = 'left' }) => {
-        const [ref, inView] = useInView({
-            triggerOnce: false, // Allow animation to trigger multiple times
-            threshold: 0.2, // Trigger when 20% of the element is visible
-        });
-
-        return (
-            <motion.div
-                ref={ref}
-                variants={fadeIn(direction)}
-                initial="hidden"
-                animate={inView ? 'visible' : 'hidden'}
-                transition={{ duration: 0.8 }}
-            >
-                {children}
-            </motion.div>
-        );
-    };
 
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
-            <motion.section
-                className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12"
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.8 }}
-            >
+            <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
                 <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 mb-16">
-                    <Section direction="left">
-                        <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-inter mb-5 leading-[1.3] pb-[10px]">
-                                <span className="bg-[#0377FF] text-transparent bg-clip-text whitespace-nowrap">
-                                    AI for Smart HR<br />Document Management
-                                </span>
-                            </h1>
-                            <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg text-left">
-                                Otomatisasi pengolahan dokumen HR untuk proses onboarding, administrasi, dan manajemen SDM yang lebih cepat dan efisien.
-                            </p>
-                            <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
-                                Request Demo
-                            </button>
-                        </div>
-                    </Section>
-                    <Section direction="right">
-                        <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-                            <img
-                                src="/images/RangkumAi/RangkumHumanR/IndustriHR1.svg"
-                                alt="HR Document Management"
-                                className="w-full max-w-md"
-                            />
-                        </div>
-                    </Section>
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold font-inter mb-5 leading-[1.3] pb-[10px]">
+                            <span className="bg-[#0377FF] text-transparent bg-clip-text whitespace-nowrap">
+                                AI for Smart HR<br />Document Management
+                            </span>
+                        </h1>
+                        <p className="text-base md:text-3xl text-black/90 mb-8 font-light max-w-lg text-left">
+                            Otomatisasi pengolahan dokumen HR untuk proses onboarding, administrasi, dan manajemen SDM yang lebih cepat dan efisien.
+                        </p>
+                        <button className="px-8 py-4 rounded-xl font-semibold text-lg bg-[#0377FF] text-white shadow-lg border border-blue-300 hover:scale-105 transition-all duration-200">
+                            Request Demo
+                        </button>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumHumanR/IndustriHR1.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md"
+                        />
+                    </div>
                 </div>
-            </motion.section>
+            </section>
 
             {/* Section Solusi dari Brilian.AI */}
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
-                <Section>
-                    <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
-                        Key Benefits
-                    </h2>
-                </Section>
+                <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
+                    Key Benefits
+                </h2>
 
                 {/* Otomatisasi Onboarding */}
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
-                    <Section direction="left">
-                        <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-                                Otomatisasi Onboarding & Rekrutmen
-                            </h2>
-                            <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
-                                Ekstraksi data dari CV, transkrip, ijazah, dan surat lamaran — langsung masuk ke sistem rekrutmen Anda.
-                            </p>
-                        </div>
-                    </Section>
-                    <Section direction="right">
-                        <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-                            <img
-                                src="/images/RangkumAi/RangkumHumanR/IndustriHR2.svg"
-                                alt="HR Document Management"
-                                className="w-full max-w-md h-auto"
-                            />
-                        </div>
-                    </Section>
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                            Otomatisasi Onboarding & Rekrutmen
+                        </h2>
+                        <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
+                            Ekstraksi data dari CV, transkrip, ijazah, dan surat lamaran — langsung masuk ke sistem rekrutmen Anda.
+                        </p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumHumanR/IndustriHR2.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md h-auto"
+                        />
+                    </div>
                 </div>
-
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
 
                 {/* Manajemen Dokumen HR */}
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto items-center justify-between gap-10 mb-25">
-                    <Section direction="right">
-                        <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-                                Manajemen Dokumen HR yang Tertata
-                            </h2>
-                            <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
-                                Klasifikasi otomatis untuk kontrak kerja, dokumen cuti, SK kenaikan jabatan, dan arsip lainnya.
-                            </p>
-                        </div>
-                    </Section>
-                    <Section direction="left">
-                        <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-                            <img
-                                src="/images/RangkumAi/RangkumHumanR/IndustriHR3.svg"
-                                alt="HR Document Management"
-                                className="w-full max-w-md h-auto"
-                            />
-                        </div>
-                    </Section>
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto items-center justify-between gap-10 mt-20 mb-20">
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                            Manajemen Dokumen HR yang Tertata
+                        </h2>
+                        <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
+                            Klasifikasi otomatis untuk kontrak kerja, dokumen cuti, SK kenaikan jabatan, dan arsip lainnya.
+                        </p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumHumanR/IndustriHR3.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md h-auto"
+                        />
+                    </div>
                 </div>
-
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
 
                 {/* Pencarian Dokumen */}
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
-                    <Section direction="left">
-                        <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-                                Pencarian Dokumen Super Cepat
-                            </h2>
-                            <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
-                                Temukan data karyawan, perjanjian kerja, atau surat tugas hanya dengan ketik kata kunci — tanpa buka folder satu-satu.
-                            </p>
-                        </div>
-                    </Section>
-                    <Section direction="right">
-                        <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-                            <img
-                                src="/images/RangkumAi/RangkumHumanR/IndustriHR4.svg"
-                                alt="HR Document Management"
-                                className="w-full max-w-md h-auto"
-                            />
-                        </div>
-                    </Section>
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                            Pencarian Dokumen Super Cepat
+                        </h2>
+                        <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
+                            Temukan data karyawan, perjanjian kerja, atau surat tugas hanya dengan ketik kata kunci — tanpa buka folder satu-satu.
+                        </p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumHumanR/IndustriHR4.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md h-auto"
+                        />
+                    </div>
                 </div>
 
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-
                 {/* Keamanan & Akses */}
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto items-center justify-between gap-10 mb-25">
-                    <Section direction="right">
-                        <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
-                                Keamanan & Akses Terbatas Sesuai Role
-                            </h2>
-                            <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
-                                API terbuka & workflow fleksibel memudahkan integrasi ke platform underwriting, CRM, dan core insurance systems Anda.
-                            </p>
-                        </div>
-                    </Section>
-                    <Section direction="left">
-                        <div className="flex-1 flex items-center justify-center px-0 md:px-6">
-                            <img
-                                src="/images/RangkumAi/RangkumHumanR/IndustriHR5.svg"
-                                alt="HR Document Management"
-                                className="w-full max-w-md h-auto"
-                            />
-                        </div>
-                    </Section>
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto items-center justify-between gap-10 mt-20 mb-20">
+                    <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
+                            Keamanan & Akses Terbatas Sesuai Role
+                        </h2>
+                        <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
+                            API terbuka & workflow fleksibel memudahkan integrasi ke platform underwriting, CRM, dan core insurance systems Anda.
+                        </p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center px-0 md:px-6">
+                        <img
+                            src="/images/RangkumAi/RangkumHumanR/IndustriHR5.svg"
+                            alt="HR Document Management"
+                            className="w-full max-w-md h-auto"
+                        />
+                    </div>
                 </div>
             </section>
 
             {/* Benefits Section */}
-            <motion.section
-                className="relative py-16 overflow-hidden px-4 md:px-12"
-                variants={fadeIn}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.8 }}
-            >
+            <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h3 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center">
                     Examples of Supported Documents
                 </h3>
                 <div className="relative max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-between ">
-                    <motion.div
-                        className="flex-1"
-                        variants={slideInLeft}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.8 }}
-                    >
+                    <div className="flex-1">
                         <ul className="space-y-6 relative z-20">
                             <li className="flex items-center gap-6 ml-[-30px]">
                                 <span className="w-2 h-2 mt-1 rounded-full bg-[#0377FF] flex-shrink-0" />
@@ -243,22 +156,16 @@ export default function RangkumHumanR() {
                                 </span>
                             </li>
                         </ul>
-                    </motion.div>
-                    <motion.div
-                        className="flex-none w-[180px] md:w-[280px] relative z-10"
-                        variants={slideInRight}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ duration: 0.8 }}
-                    >
+                    </div>
+                    <div className="flex-none w-[180px] md:w-[280px] relative z-10">
                         <img
                             src="/images//RangkumAi/RangkumHumanR/IndustriHR6.svg"
                             alt="Banking Chart"
                             className="w-full max-w-md h-auto object-contain scale-[2.0] -translate-x-[60px] "
                         />
-                    </motion.div>
+                    </div>
                 </div>
-            </motion.section>
+            </section>
 
             {/* CTA Section */}
             <section className="relative py-24 bg-white flex flex-col items-center justify-center overflow-hidden px-4 md:px-0">

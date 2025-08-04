@@ -83,7 +83,7 @@ export default function Dashboard() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
+
                 <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <lu className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
@@ -112,7 +112,7 @@ export default function Dashboard() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
+
             </section>
 
             {/*Section Solusi dari Brilian.AI*/}

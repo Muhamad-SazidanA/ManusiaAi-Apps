@@ -9,7 +9,7 @@ export default function BriliamAI() {
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
             <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
-                <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 mb-16">
+                <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-16">
                     {/* Kiri: Teks dan Button */}
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h1 className="text-8xl md:text-8xl lg:text-8xl font-bold font-inter mb-5 leading-[1.3] pb-[10px]">
@@ -41,7 +41,7 @@ export default function BriliamAI() {
                 <h2 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center">
                     What is Brilian.AI?
                 </h2>
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <p className="text-1xl md:text-3xl font-inter font-normal text-black/90 leading-relaxed max-w-lg text-left">
                             brilian.ai adalah platform manajemen pengetahuan berbasis AI yang memungkinkan akses cepat dan aman ke informasi internal, serta otomatisasi dokumen untuk efisiensi dan pengambilan keputusan yang lebih cerdas.
@@ -61,7 +61,7 @@ export default function BriliamAI() {
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#0377FF] mb-4 text-center">Key Features</h3>
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#ADADAD] mb-20 text-center">What Makes Brilian.AI Different?</h3>
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 ">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Tanya apa aja
@@ -78,8 +78,8 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Buatin Laporan
@@ -96,8 +96,8 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Analisa Laporan
@@ -114,8 +114,8 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Riset Market
@@ -132,8 +132,8 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+                
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Pikirin Ide
@@ -150,8 +150,8 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20 mb-25">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Rangkumin Meeting
@@ -168,7 +168,7 @@ export default function BriliamAI() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
+
             </section>
             {/* CTA Section */}
             <section className="relative py-24 bg-white flex items-center justify-center overflow-hidden px-4 md:px-12">

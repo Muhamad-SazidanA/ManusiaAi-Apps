@@ -1,10 +1,365 @@
-import React from "react";
-import { Outlet, Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
+  const [activeTab, setActiveTab] = useState("rangkum");
+
   const handleNavigation = (url) => {
-    window.location.href = url; // Force reload the page
+    window.location.href = url;
   };
+
+  const tabContent = {
+    rangkum: (
+      <div className="flex flex-col md:flex-row items-start gap-10">
+        {/* Left Side - Mockup Image */}
+        <div className="flex-1">
+          <img
+            src="/images/Home/ImagesHomeRangkumAI.svg"
+            alt="Rangkum.AI Platform"
+            className="w-full max-w-md mx-auto"
+          />
+        </div>
+        
+        {/* Right Side - Content */}
+        <div className="flex-1">
+          <div className="inline-block bg-[#0377FF] text-white px-4 py-1 rounded-md font-medium text-sm mb-4">
+            Rangkum.AI
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Document Intelligence System</h2>
+          <h3 className="text-xl md:text-2xl font-medium text-[#0377FF] mb-6">AI-Powered Document Automation Platform</h3>
+          <p className="text-gray-700 mb-8">
+            Rangkum.AI adalah platform cerdas untuk otomatisasi dokumen, dirancang untuk mengekstrak informasi penting dari berbagai dokumen seperti identitas, invoice, surat medis, dan formulir—tanpa template. Cocok untuk perusahaan di sektor keuangan, kesehatan, logistik, dan banyak lagi.
+          </p>
+          {/* Stats Section */}
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-blue-500">
+              <div className="text-blue-500 font-bold text-2xl">98%</div>
+              <div className="text-sm text-gray-600">Extraction Accuracy</div>
+              <div className="text-xs text-gray-500">Untuk data penting dalam dokumen</div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-blue-500">
+              <div className="text-blue-500 font-bold text-2xl">100+</div>
+              <div className="text-sm text-gray-600">Supported Types</div>
+              <div className="text-xs text-gray-500">Termasuk invoice dan form</div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-blue-500">
+              <div className="text-blue-500 font-bold text-2xl">60%</div>
+              <div className="text-sm text-gray-600">Process Time Reduction</div>
+              <div className="text-xs text-gray-500">Versus manual & template processing</div>
+            </div>
+          </div>
+          {/* Key Modules */}
+          <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">ID</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">ID & KYC Verification</h5>
+              <p className="text-xs text-gray-500">Ekstraksi data identitas dari KTP, SIM, paspor, dan dokumen lain</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">$</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Invoice & Finance</h5>
+              <p className="text-xs text-gray-500">Otomatis ekstrak, kelola, pakai, validasi invoice, dan bukti pembayaran</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">+</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Healthcare & Form</h5>
+              <p className="text-xs text-gray-500">Memahami struktur resep medis, rekam medis digital, dengan teknologi tinggi medan</p>
+            </div>
+          </div>
+          {/* Key Features */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <i className="fa-solid fa-desktop text-[#0377FF]"></i>
+              <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
+            </div>
+            <div className="space-y-3 pl-6">
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>Ekstraksi data tanpa template/manual zoning</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>AI klasifikasi otomatis jenis dokumen</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>Deteksi tabel kompleks & tulisan tangan</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>Dukungan multibahasa (termasuk Bahasa Indonesia)</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>Integrasi mudah dengan sistem ERP, CRM, RPA</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
+                <span>Model terus belajar dari dokumen baru</span>
+              </div>
+            </div>
+          </div>
+          {/* Document Evidence Box */}
+          <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
+            <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
+              <i className="fa-solid fa-info text-xs"></i>
+            </div>
+            <div>
+              <h5 className="font-medium text-sm text-gray-800 mb-1">Document Evidence</h5>
+              <p className="text-xs text-gray-600">Rangkum.AI menyimpan dokumen asli sebagai bukti, lengkap dengan timestamp untuk proses audit/validasi dokumen secara historical.</p>
+            </div>
+          </div>
+          {/* Learn More Button */}
+          <div className="text-center md:text-left">
+            <Link onClick={() => handleNavigation('/rangkum-ai')}
+              className="inline-block px-8 py-3 bg-[#0377FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+    ),
+    brilian: (
+      <div className="flex flex-col md:flex-row items-start gap-10">
+        {/* Left Side - Mockup Image */}
+        <div className="flex-1">
+          <img
+            src="/images/Home/ImagesHomeBrilianAI.svg"
+            alt="Brilian.AI Platform"
+            className="w-full max-w-md mx-auto"
+          />
+        </div>
+        {/* Right Side - Content */}
+        <div className="flex-1">
+          <div className="inline-block bg-[#6FB1FF] text-white px-4 py-1 rounded-md font-medium text-sm mb-4">
+            Brilian.AI
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Knowledge Intelligence Platform</h2>
+          <h3 className="text-xl md:text-2xl font-medium text-[#6FB1FF] mb-6">AI-Powered Knowledge Assistant for Enterprise</h3>
+          <p className="text-gray-700 mb-8">
+            Brilian.AI adalah sistem AI cerdas yang membantu yang mampu menemukan dokumen internal, menjawab pertanyaan, menyusun laporan, hingga analisis data harian — semua dalam satu platform terintegrasi. Cocok untuk tim HR, legal, sales, customer service, hingga bisnis intelligence dalam membantu akes memori institusional.
+          </p>
+          {/* Stats Section */}
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-[#6FB1FF]">
+              <div className="text-[#6FB1FF] font-bold text-2xl">100+</div>
+              <div className="text-sm text-gray-600">Integrasi Jenis File</div>
+              <div className="text-xs text-gray-500">Termasuk PDF, Excel, Word, Email</div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-[#6FB1FF]">
+              <div className="text-[#6FB1FF] font-bold text-2xl">90%</div>
+              <div className="text-sm text-gray-600">Reduction Search Time</div>
+              <div className="text-xs text-gray-500">Versus traditional search</div>
+            </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center border-l-4 border-[#6FB1FF]">
+              <div className="text-[#6FB1FF] font-bold text-2xl">90%</div>
+              <div className="text-sm text-gray-600">Less Errors</div>
+              <div className="text-xs text-gray-500">Versus manual search</div>
+            </div>
+          </div>
+          {/* Key Modules */}
+          <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">🔍</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Tanya Apa Saja</h5>
+              <p className="text-xs text-gray-500">Pencarian dokumen dan jawaban dengan bahasa alami seperti ChatGPT</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">📊</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Laporan & Insight Otomatis</h5>
+              <p className="text-xs text-gray-500">Analisis dokumen, temukan tren, dan dapatkan ringkasan dari data yang kompleks</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <span className="text-blue-600 text-sm font-bold">🔄</span>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Meeting & Timeline Manager</h5>
+              <p className="text-xs text-gray-500">Rekam percakapan rapat, ekstrak agenda dan tindak lanjut</p>
+            </div>
+          </div>
+          {/* Key Features */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <i className="fa-solid fa-desktop text-[#6FB1FF]"></i>
+              <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
+            </div>
+            <div className="space-y-3 pl-6">
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Pemahaman bahasa natural (NLP) untuk pencarian cerdas total</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Integrasi mudah dengan folder cloud (Google Drive, OneDrive, dll)</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Bisa membaca berbagai format: PDF, Excel, Word, Email</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Analisis tren, kesimpulan, dan ringkasan otomatis</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Dapat digunakan oleh tim HR, Finance, Legal, hingga Management</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-[#6FB1FF]"></i>
+                <span>Aman, privat, dan dapat disesuaikan dengan alur kerja Anda</span>
+              </div>
+            </div>
+          </div>
+          {/* Document Evidence Box */}
+          <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
+            <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
+              <i className="fa-solid fa-info text-xs"></i>
+            </div>
+            <div>
+              <h5 className="font-medium text-sm text-gray-800 mb-1">Document Intelligence in Action</h5>
+              <p className="text-xs text-gray-600">Brilian.AI terintegrasi langsung dengan proses bisnis harian untuk mengakses pengetahuan dari ribuan dokumen.</p>
+            </div>
+          </div>
+          {/* Learn More Button */}
+          <div className="text-center md:text-left">
+            <Link onClick={() => handleNavigation('/brilian-ai')}
+              className="inline-block px-8 py-3 bg-[#6FB1FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+    ),
+    advin: (
+      <div className="flex flex-col md:flex-row items-start gap-10">
+        {/* Left Side - Mockup Image */}
+        <div className="flex-1">
+          <img
+            src="/images/Home/ImagesAdvin.svg"
+            alt="ADVIN Recruitment Platform"
+            className="w-full max-w-md mx-auto"
+          />
+        </div>
+        {/* Right Side - Content */}
+        <div className="flex-1">
+          <div className="inline-block bg-emerald-500 text-white px-4 py-1 rounded-md font-medium text-sm mb-4">
+            ADVIN
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">AI Recruitment Automation</h2>
+          <h3 className="text-xl md:text-xl font-medium text-gray-700 mb-6">Intelligent Hiring. Simplified. Scalable.</h3>
+          <p className="text-gray-700 mb-8">
+            ADVIN adalah platform rekrutmen berbasis kecerdasan buatan untuk menyederhanakan seluruh proses perekrutan. Dengan menggabungkan teknologi AI canggih untuk sourcing kandidat, pre-screening, wawancara, dan rekrutmen masa yang lebih efisien dan bebas bias.
+          </p>
+          {/* Stats Section */}
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-emerald-50 p-4 rounded-lg text-center border-l-4 border-emerald-500">
+              <div className="text-emerald-500 font-bold text-2xl">70%+</div>
+              <div className="text-sm text-gray-600">Time Saved</div>
+              <div className="text-xs text-gray-500">Compared to manual recruiting processes</div>
+            </div>
+            <div className="bg-emerald-50 p-4 rounded-lg text-center border-l-4 border-emerald-500">
+              <div className="text-emerald-500 font-bold text-2xl">80%</div>
+              <div className="text-sm text-gray-600">Match Accuracy</div>
+              <div className="text-xs text-gray-500">For skills and culture fit predictions</div>
+            </div>
+            <div className="bg-emerald-50 p-4 rounded-lg text-center border-l-4 border-emerald-500">
+              <div className="text-emerald-500 font-bold text-2xl">100%</div>
+              <div className="text-sm text-gray-600">Hiring Structure Visibility</div>
+              <div className="text-xs text-gray-500">End-to-end recruitment process analytics</div>
+            </div>
+          </div>
+          {/* Key Modules */}
+          <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-emerald-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <i className="fa-solid fa-magnifying-glass text-emerald-600 text-sm"></i>
+              </div>
+              <h5 className="font-medium text-sm mb-2">AI-CV Screening</h5>
+              <p className="text-xs text-gray-500">Analisis CV otomatis dan pencocokan kandidat dengan kebutuhan jabatan</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-emerald-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <i className="fa-solid fa-video text-emerald-600 text-sm"></i>
+              </div>
+              <h5 className="font-medium text-sm mb-2">AI Interview Bot</h5>
+              <p className="text-xs text-gray-500">Sistem wawancara otomatis dengan analisis respons real-time</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 rounded-lg">
+              <div className="bg-emerald-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
+                <i className="fa-solid fa-chart-line text-emerald-600 text-sm"></i>
+              </div>
+              <h5 className="font-medium text-sm mb-2">Integrated & Predictive Analytics</h5>
+              <p className="text-xs text-gray-500">Wawasan mendalam tentang pipeline rekrutmen dan prediksi kecocokan kandidat</p>
+            </div>
+          </div>
+          {/* Key Features */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <i className="fa-solid fa-list-check text-emerald-500"></i>
+              <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
+            </div>
+            <div className="space-y-3 pl-6">
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Otomatisasi proses screening & evaluasi awal</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Penjadwalan & pengaturan undangan interview secara otomatis</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Dashboard rekrutmen lengkap & real-time tracking</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Analisis keputusan & kecepatan dengan berbagai AI</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Diversifikasi dalam hiring & kampanye rekrutmen skala besar</span>
+              </div>
+              <div className="flex gap-2 items-center text-gray-700">
+                <i className="fa-solid fa-angle-right text-emerald-500"></i>
+                <span>Aman, privat, dan dapat disesuaikan dengan alur kerja Anda</span>
+              </div>
+            </div>
+          </div>
+          {/* Recruitment Intelligence Box */}
+          <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100 mb-8 flex items-start gap-3">
+            <div className="bg-emerald-500 text-white rounded-full p-1 mt-0.5">
+              <i className="fa-solid fa-info text-xs"></i>
+            </div>
+            <div>
+              <h5 className="font-medium text-sm text-gray-800 mb-1">Recruitment Intelligence in Action</h5>
+              <p className="text-xs text-gray-600">ADVIN menggunakan AI untuk mengoptimalkan setiap tahap rekrutmen, mengurangi bias, dan meningkatkan kualitas kandidat.</p>
+            </div>
+          </div>
+          {/* Learn More Button */}
+          <div className="text-center md:text-left">
+            <Link onClick={() => handleNavigation('/advin')}
+              className="inline-block px-8 py-3 bg-emerald-500 text-white font-medium rounded-md hover:bg-emerald-600 transition-colors">
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+    ),
+  };
+
   return (
     <div className="w-full min-h-screen font-inter relative overflow-x-hidden">
       {/* Banner Section */}
@@ -403,278 +758,55 @@ export default function Dashboard() {
         <div className="max-w-6xl mx-auto">
           {/* Product Selection Tabs */}
           <div className="flex justify-center mb-14">
-            <div className="flex gap-4 rounded-full p-2 bg-gray-100">
-              <button className="px-8 py-3 bg-[#0075FF] text-white font-medium rounded-full flex items-center gap-2 shadow-md">
-                <img src="/images/Home/LogoRangkumAiP.svg" alt="Rangkum.AI" className="w-30 h-10" />
+
+            <div className="flex gap-6 rounded-xl p-2 bg-transparent justify-center">
+              <button
+                className={`
+      px-12 py-3 font-bold font-inter text-lg md:text-xl
+      rounded-[12px] border transition-all duration-200
+      ${activeTab === "rangkum"
+                    ? "bg-[#0377FF] text-white border-[#0377FF] shadow-[0_4px_16px_0_rgba(3,119,255,0.18)]"
+                    : "bg-white text-black border-[#E3F2FD] shadow-[0_4px_16px_0_rgba(33,150,243,0.18)]"
+                  }
+    `}
+                onClick={() => setActiveTab("rangkum")}
+                style={{ minWidth: 300, maxWidth: 300 }}
+              >
+                Rangkum.AI
               </button>
-              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
-                <img src="/images/Home/LogoBrilianAiH.svg" alt="Brilian.AI" className="w-30 h-10" />
+              <button
+                className={`
+      px-12 py-3 font-bold font-inter text-lg md:text-xl
+      rounded-[12px] border transition-all duration-200
+      ${activeTab === "brilian"
+                    ? "bg-[#6FB1FF] text-white border-[#6FB1FF] shadow-[0_4px_16px_0_rgba(111,177,255,0.18)]"
+                    : "bg-white text-black border-[#E3F2FD] shadow-[0_4px_16px_0_rgba(33,150,243,0.18)]"
+                  }
+    `}
+                onClick={() => setActiveTab("brilian")}
+                style={{ minWidth: 300, maxWidth: 300 }}
+              >
+                Brilian.AI
               </button>
-              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
-                <img src="/images/Home/logoAdvinH.svg" alt="ADVIN" className="w-30 h-10" />
-              </button>
-            </div>
-          </div>
-
-          {/* Content Section */}
-          <div className="flex flex-col md:flex-row items-start gap-10">
-            {/* Left Side - Mockup Image */}
-            <div className="flex-1">
-              <img
-                src="/images/Home/ImagesHomeRangkumAI.svg"
-                alt="Rangkum.AI Platform"
-                className="w-full max-w-md mx-auto"
-              />
-            </div>
-
-            {/* Right Side - Content */}
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Document Intelligence System</h2>
-              <h3 className="text-xl md:text-2xl font-medium text-[#0377FF] mb-6">AI-Powered Document Automation Platform</h3>
-
-              <p className="text-gray-700 mb-8">
-                Rangkum.AI adalah platform cerdas untuk otomatisasi dokumen, dirancang untuk mengekstrak informasi penting dari berbagai dokumen seperti identitas, invoice, surat medis, dan formulir—tanpa template. Cocok untuk perusahaan di sektor keuangan, kesehatan, logistik, dan banyak lagi.
-              </p>
-
-              {/* Stats Section */}
-              <div className="grid grid-cols-3 gap-4 mb-10">
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">98%+</div>
-                  <div className="text-sm text-gray-600">Extraction Accuracy</div>
-                  <div className="text-xs text-gray-500">Untuk data penting dalam dokumen</div>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">100+</div>
-                  <div className="text-sm text-gray-600">Supported Types</div>
-                  <div className="text-xs text-gray-500">Termasuk invoice dan form</div>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">60%</div>
-                  <div className="text-sm text-gray-600">Process Time Reduction</div>
-                  <div className="text-xs text-gray-500">Versus manual & template processing</div>
-                </div>
-              </div>
-
-              {/* Key Modules */}
-              <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
-              <div className="grid grid-cols-3 gap-4 mb-10">
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">ID</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">ID & KYC Verification</h5>
-                  <p className="text-xs text-gray-500">Ekstraksi data identitas dari KTP, SIM, paspor, dan dokumen lain</p>
-                </div>
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">$</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">Invoice & Finance</h5>
-                  <p className="text-xs text-gray-500">Otomatis ekstrak, kelola, pakai, validasi invoice, dan bukti pembayaran</p>
-                </div>
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">+</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">Healthcare & Form</h5>
-                  <p className="text-xs text-gray-500">Memahami struktur resep medis, rekam medis digital, dengan teknologi tinggi medan</p>
-                </div>
-              </div>
-
-              {/* Key Features */}
-              <div className="mb-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <i className="fa-solid fa-desktop text-[#0377FF]"></i>
-                  <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
-                </div>
-                <div className="space-y-3 pl-6">
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Ekstraksi data tanpa template/manual zoning</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>AI klasifikasi otomatis jenis dokumen</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Deteksi tabel kompleks & tulisan tangan</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Dukungan multibahasa (termasuk Bahasa Indonesia)</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Integrasi mudah dengan sistem ERP, CRM, RPA</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Model terus belajar dari dokumen baru</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Document Evidence Box */}
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
-                <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
-                  <i className="fa-solid fa-info text-xs"></i>
-                </div>
-                <div>
-                  <h5 className="font-medium text-sm text-gray-800 mb-1">Document Evidence</h5>
-                  <p className="text-xs text-gray-600">Rangkum.AI menyimpan dokumen asli sebagai bukti, lengkap dengan timestamp untuk proses audit/validasi dokumen secara historical.</p>
-                </div>
-              </div>
-
-              {/* Learn More Button */}
-              <div className="text-center md:text-left">
-                <Link onClick={() => handleNavigation('/rangkum-ai')}
-                  className="inline-block px-8 py-3 bg-[#0377FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Knowledge Intelligence Platform Section */}
-      <section className="py-20 bg-white px-4 md:px-12 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          {/* Product Selection Tabs */}
-          <div className="flex justify-center mb-14">
-            <div className="flex gap-4 rounded-full p-2 bg-gray-100">
-              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
-                <img src="/images/Home/LogoRangkumAiH.svg" alt="Rangkum.AI" className="w-30 h-10" />
-              </button>
-              <button className="px-8 py-3 bg-[#0075FF] text-white font-medium rounded-full flex items-center gap-2 shadow-md">
-                <img src="/images/Home/LogoBrilianAiP.svg" alt="Brilian.AI" className="w-30 h-10" />
-              </button>
-              <button className="px-8 py-3 bg-white text-gray-700 font-medium rounded-full flex items-center gap-2 hover:bg-gray-50 transition-all">
-                <img src="/images/Home/logoAdvinH.svg" alt="ADVIN" className="w-30 h-10" />
+              <button
+                className={`
+      px-12 py-3 font-bold font-inter text-lg md:text-xl flex flex-col items-center justify-center
+      rounded-[12px] border transition-all duration-200
+      ${activeTab === "advin"
+                    ? "bg-[#01B574] text-white border-[#01B574] shadow-[0_4px_16px_0_rgba(1,181,116,0.18)]"
+                    : "bg-white text-black border-[#E3F2FD] shadow-[0_4px_16px_0_rgba(33,150,243,0.18)]"
+                  }
+    `}
+                onClick={() => setActiveTab("advin")}
+                style={{ minWidth: 300, maxWidth: 300 }}
+              >
+                ADVIN
+                <span className="text-xs font-normal -mt-1">advanced individual</span>
               </button>
             </div>
           </div>
-
-          {/* Content Section */}
-          <div className="flex flex-col md:flex-row items-start gap-10">
-            {/* Left Side - Mockup Image */}
-            <div className="flex-1">
-              <img
-                src="/images/Home/ImagesBrilianAI.svg"
-                alt="Brilian.AI Platform"
-                className="w-full max-w-md mx-auto"
-              />
-            </div>
-
-            {/* Right Side - Content */}
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Knowledge Intelligence Platform</h2>
-              <h3 className="text-xl md:text-2xl font-medium text-[#0377FF] mb-6">AI-Powered Knowledge Assistant for Enterprise</h3>
-
-              <p className="text-gray-700 mb-8">
-                Brilian.AI adalah sistem AI cerdas yang membantu yang mampu menemukan dokumen internal, menjawab pertanyaan, menyusun laporan, hingga analisis data harian — semua dalam satu platform terintegrasi. Cocok untuk tim HR, legal, sales, customer service, hingga bisnis intelligence dalam membantu akes memori institusional.
-              </p>
-
-              {/* Stats Section */}
-              <div className="grid grid-cols-3 gap-4 mb-10">
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">100+</div>
-                  <div className="text-sm text-gray-600">Integrasi Jenis File</div>
-                  <div className="text-xs text-gray-500">Termasuk PDF, Excel, Word, Email</div>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">90%</div>
-                  <div className="text-sm text-gray-600">Reduction Search Time</div>
-                  <div className="text-xs text-gray-500">Versus traditional search</div>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-[#0377FF] font-bold text-2xl">90%</div>
-                  <div className="text-sm text-gray-600">Less Errors</div>
-                  <div className="text-xs text-gray-500">Versus manual search</div>
-                </div>
-              </div>
-
-              {/* Key Modules */}
-              <h4 className="text-lg font-bold text-gray-800 mb-4">Key Modules</h4>
-              <div className="grid grid-cols-3 gap-4 mb-10">
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">🔍</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">Tanya Apa Saja</h5>
-                  <p className="text-xs text-gray-500">Pencarian dokumen dan jawaban dengan bahasa alami seperti ChatGPT</p>
-                </div>
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">📊</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">Laporan & Insight Otomatis</h5>
-                  <p className="text-xs text-gray-500">Analisis dokumen, temukan tren, dan dapatkan ringkasan dari data yang kompleks</p>
-                </div>
-                <div className="bg-white border border-gray-200 p-4 rounded-lg">
-                  <div className="bg-blue-100 rounded-md w-8 h-8 flex items-center justify-center mb-3">
-                    <span className="text-blue-600 text-sm font-bold">🔄</span>
-                  </div>
-                  <h5 className="font-medium text-sm mb-2">Meeting & Timeline Manager</h5>
-                  <p className="text-xs text-gray-500">Rekam percakapan rapat, ekstrak agenda dan tindak lanjut</p>
-                </div>
-              </div>
-
-              {/* Key Features */}
-              <div className="mb-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <i className="fa-solid fa-desktop text-[#0377FF]"></i>
-                  <h4 className="text-lg font-bold text-gray-800">Key Features</h4>
-                </div>
-                <div className="space-y-3 pl-6">
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Pemahaman bahasa natural (NLP) untuk pencarian cerdas total</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Integrasi mudah dengan folder cloud (Google Drive, OneDrive, dll)</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Bisa membaca berbagai format: PDF, Excel, Word, Email</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Analisis tren, kesimpulan, dan ringkasan otomatis</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Dapat digunakan oleh tim HR, Finance, Legal, hingga Management</span>
-                  </div>
-                  <div className="flex gap-2 items-center text-gray-700">
-                    <i className="fa-solid fa-angle-right text-[#0377FF]"></i>
-                    <span>Aman, privat, dan dapat disesuaikan dengan alur kerja Anda</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Document Evidence Box */}
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-8 flex items-start gap-3">
-                <div className="bg-blue-500 text-white rounded-full p-1 mt-0.5">
-                  <i className="fa-solid fa-info text-xs"></i>
-                </div>
-                <div>
-                  <h5 className="font-medium text-sm text-gray-800 mb-1">Document Intelligence in Action</h5>
-                  <p className="text-xs text-gray-600">Brilian.AI terintegrasi langsung dengan proses bisnis harian untuk mengakses pengetahuan dari ribuan dokumen.</p>
-                </div>
-              </div>
-
-              {/* Learn More Button */}
-              <div className="text-center md:text-left">
-                <Link onClick={() => handleNavigation('/brilian-ai')}
-                  className="inline-block px-8 py-3 bg-[#0377FF] text-white font-medium rounded-md hover:bg-blue-600 transition-colors">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
+          {/* Dynamic Content */}
+          {tabContent[activeTab]}
         </div>
       </section>
 

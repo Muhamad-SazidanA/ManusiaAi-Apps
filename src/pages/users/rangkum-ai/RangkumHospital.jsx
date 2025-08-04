@@ -41,7 +41,7 @@ export default function RangkumHospital() {
                 <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
                     Key Benefits
                 </h2>
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Ekstraksi Otomatis Rekam Medis & Hasil Lab
@@ -58,8 +58,8 @@ export default function RangkumHospital() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Digitalisasi Arsip Medis Lama
@@ -76,8 +76,8 @@ export default function RangkumHospital() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Klaim Asuransi Lebih Cepat & Akurat
@@ -94,8 +94,8 @@ export default function RangkumHospital() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Digitalisasi Arsip Medis
@@ -112,7 +112,7 @@ export default function RangkumHospital() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
+
             </section>
 
             {/* Benefits Section */}

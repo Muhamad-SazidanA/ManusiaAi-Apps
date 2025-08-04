@@ -39,7 +39,7 @@ export default function Solutions() {
             {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#0377FF] mb-20 text-center">Our Services</h3>
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             AI Readiness &<br /> Opportunity Assessment
@@ -56,8 +56,8 @@ export default function Solutions() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
+
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Custom AI Development
@@ -74,8 +74,8 @@ export default function Solutions() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Integration with Existing<br />Systems
@@ -92,8 +92,8 @@ export default function Solutions() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="flex flex-col md:flex-row-reverse relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             Proof-of-Concept &<br />Scalable Deployment
@@ -110,8 +110,8 @@ export default function Solutions() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25">
+
+                <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 mb-25 mt-20 mb-20">
                     <div className="flex-1 flex flex-col items-start justify-center px-0 md:px-6">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-12 md:mb-8 text-left md:text-left w-full">
                             AI Lifecycle Support &<br />Optimisation
@@ -128,48 +128,7 @@ export default function Solutions() {
                         />
                     </div>
                 </div>
-                <hr className="border-t-2 border-gray-200 mt-12 mb-12" />
-            </section>
-            <section className="py-16 bg-white text-center px-4 md:px-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#0377FF] mb-12">
-                    Why <span className="text-[#0377FF]">Manusia.AI?</span>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                    <div className="bg-[#0377FF] text-white rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Pendekatan end-to-end</h3>
-                        <p className="text-base font-light">
-                            Dari strategi hingga implementasi untuk memastikan solusi AI yang berdampak.
-                        </p>
-                    </div>
-                    <div className="bg-[#0377FF] text-white rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Solusi 100% disesuaikan</h3>
-                        <p className="text-base font-light">
-                            Bukan plug-and-play generik, tetapi solusi yang relevan untuk bisnis Anda.
-                        </p>
-                    </div>
-                    <div className="bg-[#0377FF] text-white rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Fokus pada dampak bisnis</h3>
-                        <p className="text-base font-light">
-                            Bukan sekadar eksperimen teknologi, tetapi solusi yang memberikan hasil nyata.
-                        </p>
-                    </div>
-                    <div className="bg-[#0377FF] text-white rounded-lg shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Tim multidisiplin</h3>
-                        <p className="text-base font-light">
-                            AI engineers, data scientists, dan business consultants bekerja sama untuk Anda.
-                        </p>
-                    </div>
-                </div>
-            </section>
 
-            {/* deskripsi */}
-            <section className="py-16 bg-white text-center px-4 md:px-0">
-                <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-[#0377FF] mb-8 leading-tight">
-                    Siap Bangun Solusi AI yang<br /> Relevan untuk Bisnis Anda?
-                </h2>
-                <p className="text-lg md:text-3xl font-medium text-[#0377FF] max-w-3xl mx-auto leading-snug">
-                    Mari diskusi dan mulai dari yang paling berdampak.
-                </p>
             </section>
 
             {/* CTA Section */}
