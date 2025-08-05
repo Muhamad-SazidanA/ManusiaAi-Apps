@@ -95,7 +95,7 @@ export default function RangkumBangking() {
             </section>
 
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-20 overflow-hidden px-4 md:px-16 bg-white">
                 <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
                     How Rangkum.AI Helps

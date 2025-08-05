@@ -40,7 +40,7 @@ export default function RangkumAi() {
                 </div>
             </section>
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-0">
                 <h2 className="relative text-4xl md:text-5xl font-semibold text-black/90 mb-8 text-center">
                     What is{" "}
@@ -100,7 +100,7 @@ export default function RangkumAi() {
                 </div>
             </section>
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#0377FF] mb-4 text-center">What Makes</h3>
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#ADADAD] mb-20 text-center">Rangkum.AI Powerful?</h3>

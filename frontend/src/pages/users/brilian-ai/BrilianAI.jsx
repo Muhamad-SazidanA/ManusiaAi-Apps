@@ -41,7 +41,7 @@ export default function BriliamAI() {
             </section>
 
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-0">
                 <h2 className="relative text-4xl md:text-5xl font-semibold text-[#0377FF] mb-20 text-center">
                     What is Brilian.AI?
@@ -62,7 +62,7 @@ export default function BriliamAI() {
                 </div>
             </section>
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#0377FF] mb-4 text-center">Key Features</h3>
                 <h3 className="relative text-4xl md:text-5xl font-light text-[#ADADAD] mb-20 text-center">What Makes Brilian.AI Different?</h3>

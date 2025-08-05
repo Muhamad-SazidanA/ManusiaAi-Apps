@@ -40,7 +40,7 @@ export default function RangkumHospital() {
             </section>
 
 
-            {/Section Solusi dari Brilian.AI/}
+            {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
                 <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-center w-full">
                     Key Benefits

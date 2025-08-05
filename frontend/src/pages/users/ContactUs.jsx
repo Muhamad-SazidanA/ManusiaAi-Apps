@@ -179,19 +179,26 @@ export default function ContactUs() {
                             </form>
                         </div>
                         {/* Info & Map */}
-                        <div className="flex flex-col justify-start items-start">
-                            <h1 className="text-2xl md:text-3xl font-bold text-[#0377FF] mb-4 mt-2 md:mt-20 leading-tight">
+                        <div className="w-full flex flex-col items-center md:items-start justify-center text-center md:text-left px-4 md:px-0">
+                            <h1 classN ame="text-2xl md:text-3xl font-bold text-[#0377FF] mb-4 mt-2 md:mt-20 leading-tight">
                                 Bring Your Ideas to Life<br />
                                 with Manusia.AI.
                             </h1>
+
                             <p className="text-[#0377FF] text-base mb-8 max-w-md">
                                 Reach out today — let's craft intelligent solutions that accelerate your business transformation.
                             </p>
+
                             <h3 className="text-xl font-bold text-[#0377FF] mb-2">Our Office</h3>
-                            <div className="flex items-start gap-3 mb-4">
+
+                            <div className="flex items-start gap-3 mb-4 justify-center md:justify-start">
                                 <div className="w-6 h-6 bg-[#2196F3] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clipRule="evenodd"
+                                        />
                                     </svg>
                                 </div>
                                 <div>
@@ -201,18 +208,6 @@ export default function ContactUs() {
                                         Daerah Khusus Ibukota Jakarta 10150
                                     </p>
                                 </div>
-                            </div>
-                            <div className="w-full h-64 bg-[#F0F7FF] border-2 border-[#E3F2FD] rounded-2xl overflow-hidden mt-4">
-                                <iframe
-                                    title="Office Location Map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7503560738334!2d106.81235011476955!3d-6.167364095531146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2129e2647%3A0x67c1035a121f7f4a!2sJl.%20Siantar%20No.18%2C%20Cideng%2C%20Kec.%20Gambir%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2010150!5e0!3m2!1sen!2sid!4v1722211111330!5m2!1sen!2sid"
-                                    width="100%"
-                                    height="100%"
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    className="w-full h-full border-0 rounded-2xl"
-                                />
                             </div>
                         </div>
                     </div>
