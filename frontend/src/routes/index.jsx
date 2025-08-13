@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Template from "../layout/Template";
 import Dashboard from "../pages/Dashboard";
-import Blog from "../pages/users/Blog";
-import Events from "../pages/users/Events";
-import CaseStudy from "../pages/users/CaseStudy";
+import Blog from "../pages/users/news/Blog";
+import Events from "../pages/users/news/Events";
+import CaseStudy from "../pages/users/news/CaseStudy";
 import DemoEmail from "../pages/users/Demo-Email";
 import BrilianAI from "../pages/users/brilian-ai/BrilianAI";
 import BrilianBanking from "../pages/users/brilian-ai/BrilianBanking";
@@ -20,8 +20,10 @@ import Solutions from "../pages/users/Solutions";
 import History from "../pages/users/History";
 import ContactUs from "../pages/users/ContactUs";
 import AdvinAi from "../pages/users/advin-ai/AdvinAi";
-
-
+import AdvinContent from "../pages/users/advin-ai/AdvinContent";
+import AdminTemplate from "../layout/AdminTemplate";
+import AdminDashboard from "../pages/admin/AdminDashboard";
+import Loginpage from "../pages/Loginpage";
 
 export const router = createBrowserRouter([
     {
@@ -109,9 +111,28 @@ export const router = createBrowserRouter([
                 element: <AdvinAi />,
             },
             {
+                path: "advincontent",
+                element: <AdvinContent />,
+            },
+            {
                 path: "*",
                 element: <Navigate to="/" replace />,
             },
         ],
+    },
+    {
+        path: "/admin",
+        element: <AdminTemplate />,
+        children: [
+            { 
+                path: "dashboardadmin", // tanpa slash
+                element: <AdminDashboard /> 
+            },
+            
+        ],
+    },
+    { 
+        path: "login", // tanpa slash
+        element: <Loginpage /> 
     },
 ]);

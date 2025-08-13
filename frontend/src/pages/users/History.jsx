@@ -26,13 +26,13 @@ export default function History() {
 
 
                     {/* Main Title */}
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight text-center md:text-left">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight text-center md:text-left mx-auto md:mx-0">
                         Empowering Humans<br />with AI.
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 text-center md:text-left max-w-full md:max-w-[70%] font-medium">
-                        Manusia.AI is here to help companies design, build, and integrate relevant and impactful AI solutions.
+                    <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 text-center md:text-left max-w-full md:max-w-[70%] font-medium mx-auto md:mx-0">
+                        Manusia.AI is here to help companies design, build, and integrate relevant and impactful AI solutions.
                     </p>
 
                     {/* CTA Button */}

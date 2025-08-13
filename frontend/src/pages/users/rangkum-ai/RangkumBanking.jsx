@@ -97,9 +97,11 @@ export default function RangkumBangking() {
 
             {/*Section Solusi dari Brilian.AI*/}
             <section className="relative py-20 overflow-hidden px-4 md:px-16 bg-white">
-                <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-left md:text-center w-full">
-                    How Rangkum.AI Helps
-                </h2>
+                <div className="w-full flex justify-center">
+                    <h2 className="text-3xl md:text-5xl font-bold text-[#0377FF] mb-20 text-center">
+                        How Rangkum.AI Helps
+                    </h2>
+                    </div>
 
                 {/* Intro Section */}
                 <div className="flex flex-col md:flex-row-reverse max-w-6xl mx-auto items-center justify-between gap-12 mb-24">
@@ -109,7 +111,6 @@ export default function RangkumBangking() {
                             Rangkum.AI dari Manusia.AI membantu tim perbankan dan multifinance mengelola dokumen dalam volume besar secara cepat dan akurat — tanpa aturan tetap, tanpa input manual.
                         </p>
                     </div>
-
                     {/* Image */}
                     <div className="flex-1 flex items-center justify-center">
                         <img

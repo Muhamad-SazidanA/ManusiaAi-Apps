@@ -381,16 +381,15 @@ export default function Dashboard() {
 
 
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight text-center md:text-left mx-auto md:mx-0">
             Custom AI for Your <br />
             Real Business Challenges
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 text-center md:text-left max-w-full md:max-w-[70%] font-medium">
-            From Data to Insights: Tailored AI Solutions for Enterprise Growth
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 text-center md:text-left max-w-full md:max-w-[70%] font-medium mx-auto md:mx-0">
+            From Data to Insights: Tailored AI Solutions for Enterprise Growth
           </p>
-
           {/* CTA Button */}
           <div className="w-full flex justify-center md:justify-start">
             <Link onClick={() => handleNavigation('/demo-email')}

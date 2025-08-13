@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { FaWhatsapp, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-export default function Template() {
+export default function Templateee() {
     const [activeTab, setActiveTab] = useState(null);
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -153,7 +153,11 @@ export default function Template() {
                         </li>
 
                         {/* INDUSTRIES DROPDOWN */}
-                        <li className="relative group" onMouseEnter={() => setActiveTab(null)}>
+                        <li
+                            className="relative group"
+                            onMouseEnter={() => setActiveTab('industries')}
+                            onMouseLeave={() => setActiveTab(null)}
+                        >
                             <div className="flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] cursor-pointer">
                                 <span>Industries</span>
                                 <i className="fas fa-chevron-down text-xs"></i>
@@ -161,7 +165,7 @@ export default function Template() {
                             <div
                                 className={`absolute top-full left-0 mt-1 w-40 rounded-xl z-50 overflow-hidden
                                     transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                                    ${activeTab === 'brilian' || activeTab === 'rangkum' ? 'min-w-[490px] industries-dropdown-wide' : 'min-w-[150px]'}
+                                    ${activeTab === 'brilian' || activeTab === 'rangkum' || activeTab === 'advin' ? 'min-w-[490px] industries-dropdown-wide' : 'min-w-[150px]'}
                                     bg-white border border-[#E5E7EB]`}
                                 style={{
                                     boxShadow: '0 4px 20px rgba(25, 118, 237, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05)'
@@ -190,6 +194,17 @@ export default function Template() {
                                             <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Rangkum.AI
                                             <i
                                                 className={`fa-solid ${activeTab === 'rangkum' ? 'fa-chevron-right' : 'fa-chevron-down'} text-xs ml-auto transition-all duration-200`}
+                                            ></i>
+                                        </div>
+
+                                        <div
+                                            className={`relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] cursor-pointer flex items-center gap-1 text-[#444]
+                                            ${activeTab === 'advin' ? 'bg-[#F0F7FF] text-[#1976ED]' : ''}`}
+                                            onMouseEnter={() => setActiveTab('advin')}
+                                        >
+                                            <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Advin.AI
+                                            <i
+                                                className={`fa-solid ${activeTab === 'advin' ? 'fa-chevron-right' : 'fa-chevron-down'} text-xs ml-auto transition-all duration-200`}
                                             ></i>
                                         </div>
                                     </div>
@@ -257,6 +272,25 @@ export default function Template() {
                                                 >
                                                     <i className="fa-solid fa-users text-[#1976ED] text-base"></i>
                                                     <span>Human<br />Resource</span>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {activeTab === 'advin' && (
+                                        <div className="ml-2 animate-fade-in industries-content-advin" style={{ minWidth: 200, minHeight: 90 }}>
+                                            <div className="industries-list-advin grid grid-cols-2 gap-x-2 gap-y-2 w-full">
+                                                <Link onClick={() => handleNavigation('/advincontent')}
+                                                    className="industries-item"
+                                                >
+                                                    <i className="fa-solid fa-landmark text-[#1976ED] text-base"></i>
+                                                    <span>Content</span>
+                                                </Link>
+                                                <Link onClick={() => handleNavigation('/advin-ai')}
+                                                    className="industries-item"
+                                                >
+                                                    <i className="fa-solid fa-file-lines text-[#1976ED] text-base"></i>
+                                                    <span>Advin.AI</span>
                                                 </Link>
                                             </div>
                                         </div>
@@ -448,7 +482,7 @@ export default function Template() {
             </header>
             <style>
                 {`
-    @media (max-width: 1200px) {
+    @media (max-width: 1279px) {
         .custom-header-nav {
             padding-left: 12px !important;
             padding-right: 12px !important;
@@ -462,9 +496,9 @@ export default function Template() {
             height: 2.5rem !important;
         }
     }
-        @media (max-width: 1200px) {
+        @media (max-width: 1279px) {
         .industries-dropdown-wide {
-            min-width: 380px !important;
+            min-width: 370px !important;
         }
         .industries-list-brilian,
         .industries-list-rangkum {
@@ -476,13 +510,14 @@ export default function Template() {
             margin-bottom: 8px !important;
         }
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1279px) {
     .industries-list-brilian,
-    .industries-list-rangkum {
+    .industries-list-rangkum,
+    .industries-list-advin {
         display: flex !important;
         flex-direction: column !important;
         gap: 16px !important;
-        padding: 12px 8px !important;
+        padding: 8px 8px !important;
     }
     .industries-item {
         display: flex !important;
@@ -503,15 +538,20 @@ export default function Template() {
         color: #1976ED !important;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1279px) {
+    .industries-list-advin {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
     .industries-item {
         display: flex;
         align-items: center;
         gap: 12px;
         width: 100%;
         min-width: 0;
-        padding: 12px 18px;
-        border-radius: 8px;
+        padding: 18px 24px;
+        border-radius: 12px;
         font-size: 1rem;
         background: transparent;
         transition: background 0.2s, color 0.2s;
@@ -557,7 +597,7 @@ export default function Template() {
                         {/* Navigation */}
                         <div className="flex-1 flex flex-col sm:flex-row justify-between gap-4 lg:translate-x-0 lg:translate-y-0 translate-x-0 translate-y-0">
                             <div className="w-full">
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 footer-navigation">
                                     {/* Company */}
                                     <div>
                                         <h4 className="font-semibold mb-2 text-white/90 text-center sm:text-left text-sm">Company</h4>
@@ -582,6 +622,9 @@ export default function Template() {
                                             </li>
                                             <li className="w-1/2 sm:w-auto text-center sm:text-left">
                                                 <Link onClick={() => handleNavigation('/rangkum-ai')} className="hover:underline block py-1 sm:py-0">Rangkum.AI</Link>
+                                            </li>
+                                            <li className="w-1/2 sm:w-auto text-center sm:text-left">
+                                                <Link onClick={() => handleNavigation('/advin-ai')} className="hover:underline block py-1 sm:py-0">Advin.AI</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -613,34 +656,66 @@ export default function Template() {
                 </div>
             </footer>
             <style>
-                {`
-@media (max-width: 640px) {
-    .grid-cols-1 > div {
-        margin-bottom: 1rem;
+{`
+/* Mobile: 3 ke bawah (1 kolom) */
+@media (max-width: 600px) {
+    .footer-navigation {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
     }
-    footer ul {
-        font-size: 0.7rem;
+    .footer-navigation > div {
+        width: 100% !important;
+        margin-bottom: 0 !important;
     }
-    footer ul {
-        justify-content: center !important;
+    .footer-navigation ul {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
     }
-    footer ul li {
-        width: 90% !important;
+    .footer-navigation li {
+        width: 100% !important;
         text-align: center !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    footer h4 {
+    .footer-navigation h4 {
         text-align: center !important;
-        font-size: 0.85rem !important;
-    }
-    footer .max-w-6xl {
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
     }
 }
+/* Tablet ≤767px: 3 ke samping */
+@media (min-width: 601px) and (max-width: 767px) {
+    .footer-navigation {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+    .footer-navigation > div {
+        margin-bottom: 0 !important;
+        width: 100% !important;
+    }
+    .footer-navigation ul {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+    .footer-navigation li {
+        width: 100% !important;
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .footer-navigation h4 {
+        text-align: center !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
 `}
-            </style>
+</style>
         </div>
     );
 }

@@ -46,7 +46,7 @@ export default function BrilianHospital() {
 
       {/*Section Solusi dari Brilian.AI*/}
       <section className="relative py-16 overflow-hidden px-4 md:px-0">
-        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-20 text-left md:text-center w-full">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#0377FF] mb-20 text-center w-full">
           Solusi dari Brilian.AI
         </h2>
         <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
