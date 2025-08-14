@@ -279,18 +279,12 @@ export default function Templateee() {
 
                                     {activeTab === 'advin' && (
                                         <div className="ml-2 animate-fade-in industries-content-advin" style={{ minWidth: 200, minHeight: 90 }}>
-                                            <div className="industries-list-advin grid grid-cols-2 gap-x-2 gap-y-2 w-full">
+                                            <div className="industries-list-advin  gap-x-2 gap-y-2 w-full">
                                                 <Link onClick={() => handleNavigation('/advincontent')}
                                                     className="industries-item"
                                                 >
                                                     <i className="fa-solid fa-landmark text-[#1976ED] text-base"></i>
-                                                    <span>Content</span>
-                                                </Link>
-                                                <Link onClick={() => handleNavigation('/advin-ai')}
-                                                    className="industries-item"
-                                                >
-                                                    <i className="fa-solid fa-file-lines text-[#1976ED] text-base"></i>
-                                                    <span>Advin.AI</span>
+                                                    <span>Multi-Industry</span>
                                                 </Link>
                                             </div>
                                         </div>

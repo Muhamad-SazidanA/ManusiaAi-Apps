@@ -9,7 +9,7 @@ export default function RangkumBangking() {
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
-            <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-16">
+            <section className="relative py-16  flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-16">
                 <div className="relative max-w-7xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-16 md:gap-24 mb-16">
 
                     {/* Kiri: Teks dan Button */}

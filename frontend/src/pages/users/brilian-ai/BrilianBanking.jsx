@@ -8,7 +8,7 @@ export default function BrilianBanking() {
   return (
     <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-0">
+      <section className="relative py-16  flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-0">
         <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-10 md:py-0">
 
           {/* Kiri: Teks dan Button */}

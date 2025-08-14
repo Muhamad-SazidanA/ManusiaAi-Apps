@@ -7,7 +7,7 @@ export default function RangkumInsurance() {
     };
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
-            <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
+            <section className="relative py-16 flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
                 <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16 py-12">
 
                     {/* Kiri: Teks dan Button */}

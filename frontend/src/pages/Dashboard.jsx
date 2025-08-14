@@ -350,7 +350,7 @@ export default function Dashboard() {
           </div>
           {/* Learn More Button */}
           <div className="text-center md:text-left">
-            <Link onClick={() => handleNavigation('/advin')}
+            <Link onClick={() => handleNavigation('/advin-ai')}
               className="inline-block px-8 py-3 bg-emerald-500 text-white font-medium rounded-md hover:bg-emerald-600 transition-colors">
               Learn More
             </Link>

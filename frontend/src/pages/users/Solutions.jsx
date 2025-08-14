@@ -8,9 +8,8 @@ export default function Solutions() {
     return (
         <div className="w-full min-h-screen bg-white text-blue-800 font-inter relative overflow-x-hidden">
             {/* Hero Section */}
-            <section className="min-h-screen flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
-                <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 mb-16">
-
+            <section className="relative py-16 flex items-center justify-center bg-white overflow-hidden relative px-4 md:px-12">
+                <div className="relative max-w-6xl w-full mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 ">
                     {/* Kiri: Teks dan Button */}
                     <div className="flex-1 flex flex-col items-center md:items-start justify-center px-0 md:px-6 text-center md:text-left">
                         <h1 className="text-3xl md:text-5xl font-bold font-inter mb-5 leading-[1.3] pb-2">
