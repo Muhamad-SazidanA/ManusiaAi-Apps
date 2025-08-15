@@ -198,10 +198,7 @@ export default function BriliamAI() {
                             border: "1px solid #d3eaff"
                         }}
                     >
-                        {/* Bintang - hanya tampil di md ke atas */}
-                        <div className="absolute left-1/2 -translate-x-20 -translate-y-10 w-auto h-20 animate-pulse delay-500 opacity-30 z-30 pointer-events-none hidden md:block">
-                            <img src="/images/Image-BintangBG.svg" alt="Star" className="w-full h-full" />
-                        </div>
+                        
 
                         {/* Left Side */}
                         <div className="flex-1 pr-0 md:pr-10 mb-6 md:mb-0">

@@ -11,45 +11,45 @@ export default function AdvinContent() {
 
     const tabContent = {
         cv: (
-            
-                <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12 mt-8 px-4 sm:px-6 lg:px-12">
-                    {/* Left */}
-                    <div className="flex-1">
-                        <div className="flex items-center mb-4 sm:mb-6">
-                            <div className="bg-[#E8F0FE] p-3 sm:p-4 rounded-xl mr-3 sm:mr-4 flex-shrink-0">
-                                <img
-                                    src="/images/Advin/AdvinContent/icon1.svg"
-                                    alt="Icon CV"
-                                    className="w-8 h-8 sm:w-9 sm:h-9"
-                                />
-                            </div>
-                            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-                                AI CV Screening & Scoring
-                            </h2>
+
+            <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12 mt-8 px-4 sm:px-6 lg:px-12">
+                {/* Left */}
+                <div className="flex-1">
+                    <div className="flex items-center mb-4 sm:mb-6">
+                        <div className="bg-[#E8F0FE] p-3 sm:p-4 rounded-xl mr-3 sm:mr-4 flex-shrink-0">
+                            <img
+                                src="/images/Advin/AdvinContent/icon1.svg"
+                                alt="Icon CV"
+                                className="w-8 h-8 sm:w-9 sm:h-9"
+                            />
                         </div>
-                        <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
-                            Menilai ribuan CV dalam hitungan detik, memberikan skor objektif, dan memprioritaskan kandidat terbaik.
-                        </p>
-                        <ul className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                            <li><span className="text-[#1976ED] mr-2">›</span>Algoritma pencocokan berbasis AI</li>
-                            <li><span className="text-[#1976ED] mr-2">›</span>Penilaian objektif & bebas bias</li>
-                            <li><span className="text-[#1976ED] mr-2">›</span>Filter otomatis sesuai kriteria</li>
-                            <li><span className="text-[#1976ED] mr-2">›</span>Multi-language processing (Indonesia & Inggris)</li>
-                        </ul>
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+                            AI CV Screening & Scoring
+                        </h2>
                     </div>
-                    {/* Right */}
-                    <div className="flex-1 flex justify-center items-center">
-                        <img
-                            src="/images/Advin/AdvinContent/IndustriAdvin1.svg"
-                            alt="CV Screening"
-                            className="w-full max-w-xs sm:max-w-sm md:max-w-md mt-6 md:mt-0"
-                        />
-                    </div>
+                    <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
+                        Menilai ribuan CV dalam hitungan detik, memberikan skor objektif, dan memprioritaskan kandidat terbaik.
+                    </p>
+                    <ul className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
+                        <li><span className="text-[#1976ED] mr-2">›</span>Algoritma pencocokan berbasis AI</li>
+                        <li><span className="text-[#1976ED] mr-2">›</span>Penilaian objektif & bebas bias</li>
+                        <li><span className="text-[#1976ED] mr-2">›</span>Filter otomatis sesuai kriteria</li>
+                        <li><span className="text-[#1976ED] mr-2">›</span>Multi-language processing (Indonesia & Inggris)</li>
+                    </ul>
                 </div>
+                {/* Right */}
+                <div className="flex-1 flex justify-center items-center">
+                    <img
+                        src="/images/Advin/AdvinContent/IndustriAdvin1.svg"
+                        alt="CV Screening"
+                        className="w-full max-w-xs sm:max-w-sm md:max-w-md mt-6 md:mt-0"
+                    />
+                </div>
+            </div>
         ),
 
         interview: (
-            
+
             <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12 mt-8 px-4 sm:px-6 lg:px-12">
                 {/* Left */}
                 <div className="flex-1">
@@ -87,7 +87,7 @@ export default function AdvinContent() {
         ),
 
         automation: (
-            
+
             <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12 mt-8 px-4 sm:px-6 lg:px-12">
                 {/* Left */}
                 <div className="flex-1">
@@ -125,7 +125,7 @@ export default function AdvinContent() {
         ),
 
         secure: (
-            
+
             <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12 mt-8 px-4 sm:px-6 lg:px-12">
                 {/* Left */}
                 <div className="flex-1">
@@ -278,90 +278,71 @@ export default function AdvinContent() {
             </section>
 
             <section className="relative py-16 overflow-hidden px-4 md:px-12">
-            {/* Tab Section (last section) */}
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1976ED] text-center mb-20">
-                How Advin Helps
-            </h2>
-            {/* Tabs */}
-            <div className="flex flex-col md:flex-row justify-center gap-4 mb-2">
-                {/* Button1 */}
-                <button
-                    className={`flex-1 min-w-[220px] px-6 py-5 rounded-xl border transition-all duration-200 flex flex-col items-center 
-            ${activeTab === "cv"
-                            ? "bg-[#E8F0FE] border-[#1976ED] shadow-[0_4px_24px_0_rgba(25,118,237,0.10)]"
-                            : "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]"}`}
-                    onClick={() => setActiveTab("cv")}
-                >
-                    <img
-                        src={activeTab === "cv"
-                            ? "/images/Advin/AdvinContent/icon1.svg"
-                            : "/images/Advin/AdvinContent/abu1.svg"}
-                        alt="icon1"
-                        className="mb-2 w-7 h-7"
-                    />
-                    <span className="font-medium text-sm">AI CV Screening & Scoring</span>
-                </button>
-                {/* Button2 */}
-                <button
-                    className={`flex-1 min-w-[220px] px-6 py-5 rounded-xl border transition-all duration-200 flex flex-col items-center
-        ${activeTab === "interview"
-                            ? "bg-[#E6FBF0] border-[#01B574] shadow-[0_4px_24px_0_rgba(1,181,116,0.10)]"
-                            : "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]"}`}
-                    onClick={() => setActiveTab("interview")}
-                >
-                    <img
-                        src={activeTab === "interview"
-                            ? "/images/Advin/AdvinContent/icon2.svg"
-                            : "/images/Advin/AdvinContent/abu2.svg"}
-                        alt="icon2"
-                        className="mb-2 w-7 h-7"
-                    />
-                    <span className="font-medium text-sm">AI Interview & Scoring</span>
-                </button>
-
-
-                {/* Button3 */}
-                <button
-                    className={`flex-1 min-w-[220px] px-6 py-5 rounded-xl border transition-all duration-200 flex flex-col items-center
-        ${activeTab === "automation"
-                            ? "bg-[#FFF3EC] border-[#FF914D] shadow-[0_4px_24px_0_rgba(255,145,77,0.10)]"
-                            : "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]"}`}
-                    onClick={() => setActiveTab("automation")}
-                >
-                    <img
-                        src={activeTab === "automation"
-                            ? "/images/Advin/AdvinContent/icon3.svg"
-                            : "/images/Advin/AdvinContent/abu3.svg"}
-                        alt="icon3"
-                        className="mb-2 w-7 h-7"
-                    />
-                    <span className="font-medium text-sm">Dynamic Interview & Automation</span>
-                </button>
-
-                <button
-                    className={`flex-1 min-w-[220px] px-6 py-5 rounded-xl border transition-all duration-200 flex flex-col items-center
-        ${activeTab === "secure"
-                            ? "bg-[#F0F4FF] border-[#6C63FF] shadow-[0_4px_24px_0_rgba(108,99,255,0.10)]"
-                            : "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]"}`}
-                    onClick={() => setActiveTab("secure")}
-                >
-                    <img
-                        src={activeTab === "secure"
-                            ? "/images/Advin/AdvinContent/icon4.svg"
-                            : "/images/Advin/AdvinContent/abu4.svg"}
-                        alt="icon4"
-                        className="mb-2 w-7 h-7"
-                    />
-                    <span className="font-medium text-sm">Secure Talent Data Management</span>
-                </button>
-
-
-            </div>
-
-            {/* Tab Content */}
-            <div>
-                {tabContent[activeTab]}
-            </div>
+                {/* Tab Section (last section) */}
+                <h2 className="text-4xl md:text-5xl font-bold text-[#1976ED] text-center mb-20">
+                    How Advin Helps
+                </h2>
+                {/* Tabs */}
+                <div className="flex justify-center mb-4">
+                    <div className="flex gap-3 overflow-x-auto md:overflow-visible">
+                        {/* Reusable Button */}
+                        {[
+                            {
+                                key: "cv",
+                                activeBg: "bg-[#E8F0FE] border-[#1976ED] shadow-[0_4px_24px_0_rgba(25,118,237,0.10)]",
+                                inactiveBg: "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]",
+                                activeIcon: "/images/Advin/AdvinContent/icon1.svg",
+                                inactiveIcon: "/images/Advin/AdvinContent/abu1.svg",
+                                label: "AI CV Screening & Scoring"
+                            },
+                            {
+                                key: "interview",
+                                activeBg: "bg-[#E6FBF0] border-[#01B574] shadow-[0_4px_24px_0_rgba(1,181,116,0.10)]",
+                                inactiveBg: "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]",
+                                activeIcon: "/images/Advin/AdvinContent/icon2.svg",
+                                inactiveIcon: "/images/Advin/AdvinContent/abu2.svg",
+                                label: "AI Interview & Scoring"
+                            },
+                            {
+                                key: "automation",
+                                activeBg: "bg-[#FFF3EC] border-[#FF914D] shadow-[0_4px_24px_0_rgba(255,145,77,0.10)]",
+                                inactiveBg: "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]",
+                                activeIcon: "/images/Advin/AdvinContent/icon3.svg",
+                                inactiveIcon: "/images/Advin/AdvinContent/abu3.svg",
+                                label: "Dynamic Interview & Automation"
+                            },
+                            {
+                                key: "secure",
+                                activeBg: "bg-[#F0F4FF] border-[#6C63FF] shadow-[0_4px_24px_0_rgba(108,99,255,0.10)]",
+                                inactiveBg: "bg-white border-[#E3EAFD] hover:bg-[#F5F8FF]",
+                                activeIcon: "/images/Advin/AdvinContent/icon4.svg",
+                                inactiveIcon: "/images/Advin/AdvinContent/abu4.svg",
+                                label: "Secure Talent Data Management"
+                            }
+                        ].map(tab => (
+                            <button
+                                key={tab.key}
+                                className={`transition-all duration-200 border rounded-xl flex flex-col items-center justify-center
+                    ${activeTab === tab.key ? tab.activeBg : tab.inactiveBg}
+                    w-[55px] h-[55px] md:w-auto md:h-auto md:min-w-[180px] px-3 md:px-6 py-3 md:py-5`}
+                                onClick={() => setActiveTab(tab.key)}
+                            >
+                                <img
+                                    src={activeTab === tab.key ? tab.activeIcon : tab.inactiveIcon}
+                                    alt={tab.label}
+                                    className="w-7 h-7"
+                                />
+                                <span className="hidden md:inline font-medium text-sm mt-2">
+                                    {tab.label}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                {/* Tab Content */}
+                <div>
+                    {tabContent[activeTab]}
+                </div>
             </section>
 
             {/* CTA Section */}
@@ -386,10 +367,7 @@ export default function AdvinContent() {
                             border: "1px solid #d3eaff"
                         }}
                     >
-                        {/* Bintang - hanya tampil di md ke atas */}
-                        <div className="absolute left-1/2 -translate-x-20 -translate-y-10 w-auto h-20 animate-pulse delay-500 opacity-30 z-30 pointer-events-none hidden md:block">
-                            <img src="/images/Image-BintangBG.svg" alt="Star" className="w-full h-full" />
-                        </div>
+
 
                         {/* Left Side */}
                         <div className="flex-1 pr-0 md:pr-10 mb-6 md:mb-0">

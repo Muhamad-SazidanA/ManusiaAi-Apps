@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import { FaWhatsapp, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaWhatsapp, FaBars, FaTimes, FaChevronDown, FaChevronUp, FaIndustry, FaHistory, FaEnvelope, FaLightbulb, FaBoxOpen, FaBlog, FaCalendarAlt, FaBookOpen } from "react-icons/fa";
 
 export default function Templateee() {
     const [activeTab, setActiveTab] = useState(null);
@@ -72,7 +72,9 @@ export default function Templateee() {
                     {/* Navbar - Center */}
                     <ul className="hidden lg:flex items-center gap-2 md:gap-4 font-medium text-[#222] mx-auto">
                         <li>
-                            <Link onClick={() => handleNavigation('/')} className="relative px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED]">Home</Link>
+                            <Link onClick={() => handleNavigation('/')} className="relative px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] flex items-center gap-2">
+                                Home
+                            </Link>
                         </li>
                         <li
                             className="relative group"
@@ -96,22 +98,24 @@ export default function Templateee() {
                                         onClick={() => handleNavigation('/history')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
                                     >
-                                        <i className="fa-solid fa-brain text-[#1976ED] text-lg"></i>History
+                                        <FaHistory className="text-[#1976ED] text-lg" />
+                                        History
                                     </Link>
                                     <Link
                                         onClick={() => handleNavigation('/contact-us')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
                                     >
-                                        <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i>Contact Us
+                                        <FaEnvelope className="text-[#1976ED] text-lg" />
+                                        Contact Us
                                     </Link>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <Link onClick={() => handleNavigation('/solutions')} className="relative px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED]">Solutions</Link>
+                            <Link onClick={() => handleNavigation('/solutions')} className="relative px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] flex items-center gap-2">
+                                Solutions
+                            </Link>
                         </li>
-
-                        {/* --- KEEP THIS PRODUCTS & INDUSTRIES DROPDOWN --- */}
                         <li
                             className="relative group"
                             onMouseEnter={() => setActiveTab('products')}
@@ -146,13 +150,12 @@ export default function Templateee() {
                                         onClick={() => handleNavigation('/advin-ai')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-3 w-full"
                                     >
-                                        <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Advin.AI
+                                        <FaIndustry className="text-[#1976ED] text-lg" />
+                                        Advin.AI
                                     </Link>
                                 </div>
                             </div>
                         </li>
-
-                        {/* INDUSTRIES DROPDOWN */}
                         <li
                             className="relative group"
                             onMouseEnter={() => setActiveTab('industries')}
@@ -202,7 +205,7 @@ export default function Templateee() {
                                             ${activeTab === 'advin' ? 'bg-[#F0F7FF] text-[#1976ED]' : ''}`}
                                             onMouseEnter={() => setActiveTab('advin')}
                                         >
-                                            <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Advin.AI
+                                            <FaIndustry className="text-[#1976ED] text-lg" /> Advin.AI
                                             <i
                                                 className={`fa-solid ${activeTab === 'advin' ? 'fa-chevron-right' : 'fa-chevron-down'} text-xs ml-auto transition-all duration-200`}
                                             ></i>
@@ -284,7 +287,7 @@ export default function Templateee() {
                                                     className="industries-item"
                                                 >
                                                     <i className="fa-solid fa-landmark text-[#1976ED] text-base"></i>
-                                                    <span>Multi-Industry</span>
+                                                    <span>For All Industries</span>
                                                 </Link>
                                             </div>
                                         </div>
@@ -314,19 +317,22 @@ export default function Templateee() {
                                         onClick={() => handleNavigation('/blog')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-2 w-full"
                                     >
-                                        <i className="fa-solid fa-brain text-[#1976ED] text-lg"></i> Blogs
+                                        <FaBlog className="text-[#1976ED] text-lg" />
+                                        Blogs
                                     </Link>
                                     <Link
                                         onClick={() => handleNavigation('/events')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-3 w-full"
                                     >
-                                        <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Events
+                                        <FaCalendarAlt className="text-[#1976ED] text-lg" />
+                                        Events
                                     </Link>
                                     <Link
                                         onClick={() => handleNavigation('/casestudy')}
                                         className="relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-[#F0F7FF] hover:text-[#1976ED] focus:bg-[#F0F7FF] focus:text-[#1976ED] text-[#444] flex items-center gap-3 w-full"
                                     >
-                                        <i className="fa-solid fa-file-lines text-[#1976ED] text-lg"></i> Case Study
+                                        <FaBookOpen className="text-[#1976ED] text-lg" />
+                                        Case Study
                                     </Link>
                                 </div>
                             </div>
@@ -360,7 +366,7 @@ export default function Templateee() {
                                 <div className="flex justify-between items-center mb-8">
                                     <img src="/LogoUtama-Manusia.Ai.svg" alt="Manusia.AI" className="h-8 w-auto" />
                                     <button
-                                        className="text-[#0377FF] p-2\ rounded-md focus:outline-none"
+                                        className="text-[#0377FF] p-2 rounded-md focus:outline-none"
                                         onClick={() => setMobileMenuOpen(false)}
                                         aria-label="Close menu"
                                     >
@@ -397,6 +403,7 @@ export default function Templateee() {
                                         <div className="ml-4 flex flex-col gap-1">
                                             <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/brilian-ai'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Brilian.AI</Link>
                                             <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/rangkum-ai'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Rangkum.AI</Link>
+                                            <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/advin-ai'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Advin.AI</Link>
                                         </div>
                                     )}
                                     {/* Industries */}
@@ -440,6 +447,19 @@ export default function Templateee() {
                                                     <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/rangkum-hospital'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Health Care</Link>
                                                     <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/rangkum-insurance'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Insurance</Link>
                                                     <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/rangkum-humanr'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">Human Resource</Link>
+                                                </div>
+                                            )}
+                                            {/* Advin.AI Submenu */}
+                                            <button
+                                                className="flex items-center justify-between w-full py-2 px-2 rounded-lg hover:bg-[#F0F7FF] font-semibold"
+                                                onClick={() => setMobileDropdown(d => ({ ...d, industriesAdvin: !d.industriesAdvin }))}
+                                            >
+                                                <span>Advin.AI</span>
+                                                {mobileDropdown.industriesAdvin ? <FaChevronUp /> : <FaChevronDown />}
+                                            </button>
+                                            {mobileDropdown.industriesAdvin && (
+                                                <div className="ml-4 flex flex-col gap-1">
+                                                    <Link onClick={() => { setMobileMenuOpen(false); handleNavigation('/advincontent'); }} className="block py-2 px-2 rounded-lg hover:bg-[#F0F7FF]">For All Industries</Link>
                                                 </div>
                                             )}
                                         </div>
@@ -649,8 +669,9 @@ export default function Templateee() {
                     </div>
                 </div>
             </footer>
+            {/* Responsive Adjustments */}
             <style>
-{`
+                {`
 /* Mobile: 3 ke bawah (1 kolom) */
 @media (max-width: 600px) {
     .footer-navigation {
@@ -679,6 +700,7 @@ export default function Templateee() {
         margin-bottom: 0.5rem !important;
     }
 }
+
 /* Tablet ≤767px: 3 ke samping */
 @media (min-width: 601px) and (max-width: 767px) {
     .footer-navigation {
@@ -708,8 +730,60 @@ export default function Templateee() {
     }
 }
 
+/* Desktop ≥768px: 3 ke samping */
+@media (min-width: 768px) {
+    .footer-navigation {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 24px !important;
+    }
+    .footer-navigation > div {
+        margin-bottom: 0 !important;
+        width: 100% !important;
+    }
+    .footer-navigation ul {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+    }
+    .footer-navigation li {
+        width: auto !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .footer-navigation h4 {
+        text-align: left !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 767px) {
+    .mobile-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        padding: 8px !important;
+    }
+    .mobile-menu-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 12px 16px !important;
+        border-radius: 8px !important;
+        font-size: 1rem !important;
+        background: transparent !important;
+        transition: background 0.2s, color 0.2s;
+    }
+    .mobile-menu-item:hover {
+        background: #F0F7FF !important;
+        color: #1976ED !important;
+    }
+}
 `}
-</style>
+            </style>
         </div>
     );
 }
